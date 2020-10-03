@@ -69,6 +69,13 @@ public class SammyController : MonoBehaviour, ITrampolineTarget
         velocity.y = Mathf.Sqrt(bounceHeight * -2.0f * GlobalVariables.instance.data.gravity);
         currentJumps = 0;
     }
+
+    /* Getters */
+
+    public Vector3 GetVelocity()
+    {
+        return velocity;
+    }
 }
 
 [CreateAssetMenu(fileName="SammyControllerData", menuName="Data/SammyControllerData")]

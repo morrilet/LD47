@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: GlobalVariables
+  m_Name: GlobalVariables_REF
   m_EditorClassIdentifier: Assembly-CSharp::GlobalVariablesData
-  gravity: -9.81
+  gravity: -49.05

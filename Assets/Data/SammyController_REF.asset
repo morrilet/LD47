@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: SammyController
+  m_Name: SammyController_REF
   m_EditorClassIdentifier: Assembly-CSharp::SammyControllerData
-  horizontalSpeed_Grounded: 3
-  horizontalSpeed_Air: 2.5
-  jumpForce: 500
+  horizontalSpeed_Grounded: 6
+  horizontalSpeed_Air: 5
+  jumpHeight: 3
   jumpCount: 2
