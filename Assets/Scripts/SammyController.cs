@@ -61,20 +61,6 @@ public class SammyController : MonoBehaviour
             }
         }
     }
-
-    private void CheckIsGrounded() {
-        RaycastHit hitInfo;
-        bool isGrounded = Physics.SphereCast(
-            transform.position,
-            controller.radius,
-            Vector3.down,
-            out hitInfo,
-            (controller.height / 2.0f + controller.skinWidth),
-            data.groundCheckLayerMask
-        );
-
-        Debug.Log(isGrounded);
-    }
 }
 
 [CreateAssetMenu(fileName="SammyControllerData", menuName="Data/SammyControllerData")]
@@ -86,6 +72,4 @@ public class SammyControllerData : ScriptableObject {
     public float horizontalSpeed_Air;
     public float jumpHeight;
     public float jumpCount;
-
-    public LayerMask groundCheckLayerMask;
 }
