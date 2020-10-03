@@ -65,6 +65,19 @@ public class SammyController : MonoBehaviour, ITrampolineTarget
         }
     }
 
+    public void Reset(Vector3 position) {
+        Debug.Log("RESET PLAYER");
+
+        currentJumps = 0;
+        currentInput = Vector3.zero;
+        prevInput = Vector3.zero;
+        
+        // CharacterController resets any `transform.position` changes. Hide our sins from it.
+        controller.enabled = false;
+        transform.position = position;
+        controller.enabled = true;
+    }
+
     /* INTERFACE IMPLEMENTATIONS */
     
     public void Bounce(float bounceHeight) {
