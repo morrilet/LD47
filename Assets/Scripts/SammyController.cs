@@ -6,6 +6,7 @@ public class SammyController : MonoBehaviour, ITrampolineTarget
 {
     [SerializeField] private CharacterController controller;
     [SerializeField] private SammyControllerData data;
+    [SerializeField] private Pusher pusher;
 
     private Vector2 currentInput, prevInput;
     private int currentJumps;
@@ -18,9 +19,9 @@ public class SammyController : MonoBehaviour, ITrampolineTarget
         ApplyHorizontalSpeed();
         ApplyVerticalSpeed();
         ApplyGravity();
+        ApplyLogic();
 
         controller.Move(velocity * Time.deltaTime);
-        ApplyLogic();
     }
 
     private void ResetVelocity() {
@@ -42,6 +43,8 @@ public class SammyController : MonoBehaviour, ITrampolineTarget
         if (controller.isGrounded) {
             currentJumps = 0;
         }
+
+        pusher.velocity = velocity;
     }
 
     private void ApplyGravity() {
