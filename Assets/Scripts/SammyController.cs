@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SammyController : MonoBehaviour
+public class SammyController : MonoBehaviour, ITrampolineTarget
 {
     [SerializeField] private CharacterController controller;
     [SerializeField] private SammyControllerData data;
@@ -60,6 +60,14 @@ public class SammyController : MonoBehaviour
                 currentJumps++;
             }
         }
+    }
+
+    /* INTERFACE IMPLEMENTATIONS */
+    
+    public void Bounce(float bounceHeight) {
+        // Note that this is the same logic as jump but we reset the jump count afterwards.
+        velocity.y = Mathf.Sqrt(bounceHeight * -2.0f * GlobalVariables.instance.data.gravity);
+        currentJumps = 0;
     }
 }
 
