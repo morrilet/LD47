@@ -143,7 +143,7 @@ MonoBehaviour:
   - {fileID: 7664512889096019835}
   layerMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1
 --- !u!1 &7664512889096019832
 GameObject:
   m_ObjectHideFlags: 0

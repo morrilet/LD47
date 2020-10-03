@@ -18,9 +18,9 @@ public class Button : Effector
         pressed = false;
     }
 
-    protected override void EnterAction(GameObject other)
+    protected override void StayAction(GameObject other)
     {
-        if (layerMask == (layerMask | (1 << other.layer)))
+        if (!(layerMask == (layerMask | (1 << other.layer))))
         {
             pressed = true;
         }
@@ -28,7 +28,7 @@ public class Button : Effector
 
     protected override void ExitAction(GameObject other)
     {
-        if (layerMask == (layerMask | (1 << other.layer)))
+        if (!(layerMask == (layerMask | (1 << other.layer))))
         {
             pressed = false;
         }
