@@ -8,6 +8,7 @@ public class MainMenuController : MonoBehaviour
     [Header("References")]
     [SerializeField] private CanvasGroup mainMenu;
     [SerializeField] private CanvasGroup optionsMenu;
+    [SerializeField] private CanvasGroup levelSelectMenu;
 
     [Space, Header("Effects")]
     [SerializeField] private float transitionDuration = 0.2f;
@@ -19,6 +20,7 @@ public class MainMenuController : MonoBehaviour
 
         SetMenuActive(mainMenu, true);
         SetMenuActive(optionsMenu, false);
+        SetMenuActive(levelSelectMenu, false);
     }
 
     private void SetMenuActive(CanvasGroup canvas, bool active) {
@@ -53,9 +55,8 @@ public class MainMenuController : MonoBehaviour
     /* -~-~-~-~- MENU API -~-~-~-~- */
     
     public void Play() {
-        Debug.Log("PLAY");
-
-        // TODO: Add play logic here! Hook into the scene manager.
+        StartCoroutine(SetMenuActiveCoroutine(mainMenu, false, transitionDuration));
+        StartCoroutine(SetMenuActiveCoroutine(levelSelectMenu, true, transitionDuration, transitionDuration));
     }
 
     public void Quit() {
@@ -67,9 +68,14 @@ public class MainMenuController : MonoBehaviour
         StartCoroutine(SetMenuActiveCoroutine(optionsMenu, true, transitionDuration, transitionDuration));
     }
 
-    public void SwitchToMainMenu() {
+    public void SwitchToMainMenuFromOptions() {
         StartCoroutine(SetMenuActiveCoroutine(mainMenu, true, transitionDuration, transitionDuration));
         StartCoroutine(SetMenuActiveCoroutine(optionsMenu, false, transitionDuration));
+    }
+
+    public void SwitchToMainMenuFromLevelSelect() {
+        StartCoroutine(SetMenuActiveCoroutine(mainMenu, true, transitionDuration, transitionDuration));
+        StartCoroutine(SetMenuActiveCoroutine(levelSelectMenu, false, transitionDuration));
     }
 
     // TODO: Set the sliders to the initial value from the audio manager.
