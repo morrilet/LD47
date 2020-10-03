@@ -9,29 +9,25 @@ public class SammyController : MonoBehaviour
 
     private Vector2 currentInput, prevInput;
     private int currentJumps;
-    private Vector3 velocity;
+    private Vector3 velocity = Vector3.zero;
 
     private void Update() {
         GetInput();
 
-        ResetVelocity(ref velocity);
-        ApplyHorizontalSpeed(ref velocity);
-        ApplyVerticalSpeed(ref velocity);
-        ApplyGravity(ref velocity);
-        ApplyTimescale(ref velocity);
+        ResetVelocity();
+        ApplyHorizontalSpeed();
+        ApplyVerticalSpeed();
+        ApplyGravity();
 
-        controller.Move(velocity);
-        CheckIsGrounded();
-
+        controller.Move(velocity * Time.deltaTime);
         ApplyLogic();
     }
 
-    private void ResetVelocity(ref Vector3 velocity) {
+    private void ResetVelocity() {
         // We reset the velocity axes separately. Vertical should be cumulative, horizontal should be snappier.
         velocity.x = 0.0f;
 
         if (controller.isGrounded && velocity.y < -0.1f) {
-            Debug.Log("HERE");
             velocity.y = -0.1f;  // Need *SOME* downward input to get `controller.isGrounded` working.
         }
     }
@@ -48,26 +44,22 @@ public class SammyController : MonoBehaviour
         }
     }
 
-    private void ApplyGravity(ref Vector3 velocity) {
-        velocity += (Vector3.up * GlobalVariables.instance.data.gravity * Time.deltaTime);
+    private void ApplyGravity() {
+        velocity.y += GlobalVariables.instance.data.gravity * Time.deltaTime;
     }
 
-    private void ApplyHorizontalSpeed(ref Vector3 velocity) {
+    private void ApplyHorizontalSpeed() {
         float horizSpeed = currentInput.x * (controller.isGrounded ? data.horizontalSpeed_Grounded : data.horizontalSpeed_Air);
-        velocity += Vector3.right * horizSpeed;
+        velocity.x += horizSpeed;
     }
 
-    private void ApplyVerticalSpeed(ref Vector3 velocity) {
+    private void ApplyVerticalSpeed() {
         if ((currentInput.y > 0 && prevInput.y <= 0) || Input.GetButtonDown("Jump")) {
             if (currentJumps < data.jumpCount) {
-                velocity.y += Mathf.Sqrt(data.jumpHeight * -3.0f * GlobalVariables.instance.data.gravity);
+                velocity.y = Mathf.Sqrt(data.jumpHeight * -2.0f * GlobalVariables.instance.data.gravity);
                 currentJumps++;
             }
         }
-    }
-
-    private void ApplyTimescale(ref Vector3 velocity) {
-        velocity *= Time.deltaTime;
     }
 
     private void CheckIsGrounded() {
