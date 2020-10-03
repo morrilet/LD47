@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    //TODO: Add randomized pitch, global value change for Effects vs Music
+
     public Sound[] sounds;
 
     public static AudioManager instance;
