@@ -52,8 +52,11 @@ public class PlatformSpawner : MonoBehaviour {
     }
 
     private void PlacePlatform() {
-        GameObject.Instantiate(
-            GetDesiredPlatformPrefab(), transform.position, Quaternion.identity
-        );
+        GameObject newObj = GameObject.Instantiate(GetDesiredPlatformPrefab(), transform.position, Quaternion.identity);
+        
+        ConveyorBelt belt = newObj.GetComponent<ConveyorBelt>();
+        if (belt != null) {
+            belt.direction = (int)Mathf.Sign(player.GetVelocity().x);
+        }
     }
 }

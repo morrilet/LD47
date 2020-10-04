@@ -5,10 +5,8 @@ using UnityEngine;
 public class ConveyorBelt : Effector
 {
     //Direction should be a value of -1 or 1
-    [SerializeField]
-    private int direction;
-    [SerializeField]
-    private float speed;
+    public int direction;
+    [SerializeField] private float speed;
 
     protected override void StayAction(GameObject other)
     {
