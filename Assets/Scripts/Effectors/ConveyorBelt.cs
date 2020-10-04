@@ -16,5 +16,4 @@ public class ConveyorBelt : Effector
             target.Convey(direction, speed);
         }
     }
-
 }
