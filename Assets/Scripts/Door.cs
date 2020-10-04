@@ -7,7 +7,7 @@ using UnityEditor.Animations;
 public class Door : MonoBehaviour
 {
     public Animator animator;
-    public Button doorTrigger;
+    public FloorButton doorTrigger;
 
 
     private void Update()

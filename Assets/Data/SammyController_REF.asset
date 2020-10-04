@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SammyControllerData
   horizontalSpeed_Grounded: 6
   horizontalSpeed_Air: 5
-  jumpHeight: 3
-  jumpCount: 2
+  jumpHeight: 4
+  jumpCount: 1
+  timeSlowScale: 0

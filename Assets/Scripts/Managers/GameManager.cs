@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class GameManager : MonoBehaviour
         if (instance != null)
             GameObject.DestroyImmediate(this.gameObject);
         instance = this;
+
+        // Unlock the current scene for the player. This enables it in level_select.
+        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name, 1);
     }
 
     private void Start() {

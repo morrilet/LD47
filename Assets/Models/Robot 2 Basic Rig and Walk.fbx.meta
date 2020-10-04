@@ -1,8 +1,17 @@
 fileFormatVersion: 2
-guid: 00ae2131ad0ce3b4fa5ba8143544342b
+guid: e9c1f836d9c522142bcf38f3b2aa4d6a
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 317091619687557325
+    second: rig|A Pose
+  - first:
+      74: 1023992570608409904
+    second: rig|Walk
+  - first:
+      74: -7974494615698685310
+    second: rig|Weight Test
   externalObjects: {}
   materials:
     materialImportMode: 1

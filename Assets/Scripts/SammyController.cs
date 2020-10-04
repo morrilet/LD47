@@ -23,16 +23,16 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
         ApplyHorizontalSpeed();
         ApplyVerticalSpeed();
         ApplyGravity();
-        ApplyLogic();
 
         controller.Move(velocity * Time.deltaTime);
+        ApplyLogic();
     }
 
     private void ResetVelocity() {
         // We reset the velocity axes separately. Vertical should be cumulative, horizontal should be snappier.
         velocity.x = 0.0f;
 
-        if (controller.isGrounded && velocity.y < GlobalVariables.instance.data.gravity * Time.deltaTime) {
+        if (isGrounded && velocity.y < GlobalVariables.instance.data.gravity * Time.deltaTime) {
             velocity.y = GlobalVariables.instance.data.gravity * Time.deltaTime;  // Need *SOME* downward input to get `controller.isGrounded` working.
         }
     }
@@ -44,14 +44,14 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
     }
 
     private void ApplyLogic() {
-        if (controller.isGrounded) {
+        isGrounded = CheckIsGrounded();
+
+        if (isGrounded) {
             currentJumps = 0;
         }
 
         pusher.velocity = velocity;
-
         isGroundedPrev = isGrounded;
-        isGrounded = CheckIsGrounded();
     }
 
     private void ApplyGravity() {
@@ -59,13 +59,13 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
     }
 
     private void ApplyHorizontalSpeed() {
-        float horizSpeed = currentInput.x * (controller.isGrounded ? data.horizontalSpeed_Grounded : data.horizontalSpeed_Air);
+        float horizSpeed = currentInput.x * (isGrounded ? data.horizontalSpeed_Grounded : data.horizontalSpeed_Air);
         velocity.x += horizSpeed;
     }
 
     private void ApplyVerticalSpeed() {
         if ((currentInput.y > 0 && prevInput.y <= 0) || Input.GetButtonDown("Jump")) {
-            if (currentJumps < data.jumpCount) {
+            if (isGrounded && currentJumps < data.jumpCount) {
                 velocity.y = Mathf.Sqrt(data.jumpHeight * -2.0f * GlobalVariables.instance.data.gravity);
                 currentJumps++;
             }
@@ -76,7 +76,7 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
         RaycastHit hitInfo;
         return Physics.SphereCast(
             transform.position, controller.radius, Vector3.down, out hitInfo, 
-            (controller.height / 2.0f) + controller.skinWidth, groundLayerMask);
+            (controller.height / 2.0f) + controller.skinWidth - controller.radius, groundLayerMask);
     }
 
     public void Reset(Vector3 position) {
@@ -124,7 +124,4 @@ public class SammyControllerData : ScriptableObject {
     public float horizontalSpeed_Air;
     public float jumpHeight;
     public float jumpCount;
-
-    [Space, Header("Time Dilation")]
-    public float timeSlowScale;
 }

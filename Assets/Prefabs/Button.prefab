@@ -136,14 +136,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7664512888452585467}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa5a8a2b57af6514182027554418bbcb, type: 3}
+  m_Script: {fileID: 11500000, guid: 192df33656d95b3419507fde2ee39946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   triggers:
   - {fileID: 7664512889096019835}
   layerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 768
 --- !u!1 &7664512889096019832
 GameObject:
   m_ObjectHideFlags: 0
