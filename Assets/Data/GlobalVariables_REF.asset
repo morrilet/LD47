@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: GlobalVariables_REF
   m_EditorClassIdentifier: Assembly-CSharp::GlobalVariablesData
   gravity: -49.05
+  timeSlowScale: 0.25
+  timeSlowTransitionDuration: 0

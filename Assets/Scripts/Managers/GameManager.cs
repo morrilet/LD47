@@ -28,7 +28,5 @@ public class GameManager : MonoBehaviour
     public void KillPlayer() {
         currentLoopCount += 1;
         player.Reset(respawnPosition);
-
-        Debug.Log($"NEW LOOP COUNT: {currentLoopCount}");
-    } 
+    }
 }

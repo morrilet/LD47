@@ -20,4 +20,6 @@ public class GlobalVariables : MonoBehaviour
 public class GlobalVariablesData : ScriptableObject {
 
     public float gravity;
+    public float timeSlowScale;
+    public float timeSlowTransitionDuration;
 }
