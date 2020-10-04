@@ -27,15 +27,20 @@ public class PlatformSpawner : MonoBehaviour {
 
     public void HandleScaleTime() {
 
-        if(Input.GetButton("Fire3") && !player.GetController().isGrounded) {
+        if(Input.GetButtonDown("Fire3") && !player.isGrounded) {
             TimeManager.instance.SetTimeScale(
                 GlobalVariables.instance.data.timeSlowScale, GlobalVariables.instance.data.timeSlowTransitionDuration
             );
         }
-        if (Input.GetButtonUp("Fire3") || player.GetController().isGrounded) {
+        if (Input.GetButtonUp("Fire3") || (player.isGrounded && !player.isGroundedPrev)) {
             TimeManager.instance.SetTimeScale(
                 1.0f, GlobalVariables.instance.data.timeSlowTransitionDuration
             );
+        }
+        if (Input.GetButton("Fire3") && (!player.isGrounded && player.isGroundedPrev)) {
+            TimeManager.instance.SetTimeScale(
+                GlobalVariables.instance.data.timeSlowScale, GlobalVariables.instance.data.timeSlowTransitionDuration
+                );
         }
     }
 
