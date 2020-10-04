@@ -82,13 +82,15 @@ public class MainMenuController : MonoBehaviour
 
     public void SetEffectsVolume(float value) {
         Debug.Log($"SET EFFECTS VOLUME: {value}");
-        
+
+        AudioManager.instance.SetEffectsVolume(value);
         // TODO: Add effects volume logic here! Hook into the audio manager.
     }
 
     public void SetMusicVolume(float value) {
         Debug.Log($"SET MUSIC VOLUME {value}");
 
+        AudioManager.instance.SetMusicVolume(value);
         // TODO: Add music volume logic here! Hook into the audio manager.
     }
 }
