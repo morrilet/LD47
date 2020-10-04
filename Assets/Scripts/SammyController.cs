@@ -5,8 +5,12 @@ using UnityEngine;
 public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTarget
 {
     [SerializeField] private CharacterController controller;
+    [SerializeField] private LayerMask groundLayerMask;
     [SerializeField] private SammyControllerData data;
     [SerializeField] private Pusher pusher;
+
+    public bool isGrounded { get; private set; }
+    public bool isGroundedPrev { get; private set; }
 
     private Vector2 currentInput, prevInput;
     private int currentJumps;
@@ -28,8 +32,8 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
         // We reset the velocity axes separately. Vertical should be cumulative, horizontal should be snappier.
         velocity.x = 0.0f;
 
-        if (controller.isGrounded && velocity.y < -0.1f) {
-            velocity.y = -0.1f;  // Need *SOME* downward input to get `controller.isGrounded` working.
+        if (controller.isGrounded && velocity.y < GlobalVariables.instance.data.gravity * Time.deltaTime) {
+            velocity.y = GlobalVariables.instance.data.gravity * Time.deltaTime;  // Need *SOME* downward input to get `controller.isGrounded` working.
         }
     }
 
@@ -45,6 +49,9 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
         }
 
         pusher.velocity = velocity;
+
+        isGroundedPrev = isGrounded;
+        isGrounded = CheckIsGrounded();
     }
 
     private void ApplyGravity() {
@@ -63,6 +70,13 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
                 currentJumps++;
             }
         }
+    }
+
+    private bool CheckIsGrounded() {
+        RaycastHit hitInfo;
+        return Physics.SphereCast(
+            transform.position, controller.radius, Vector3.down, out hitInfo, 
+            (controller.height / 2.0f) + controller.skinWidth, groundLayerMask);
     }
 
     public void Reset(Vector3 position) {
@@ -97,6 +111,10 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
     {
         return velocity;
     }
+
+    public CharacterController GetController() {
+        return controller;
+    }
 }
 
 [CreateAssetMenu(fileName="SammyControllerData", menuName="Data/SammyControllerData")]
@@ -104,8 +122,11 @@ public class SammyControllerData : ScriptableObject {
     [Header("Ground Movement")]
     public float horizontalSpeed_Grounded;
     
-    [Header("Air Movement")]
+    [Space, Header("Air Movement")]
     public float horizontalSpeed_Air;
     public float jumpHeight;
     public float jumpCount;
+
+    [Space, Header("Time Dilation")]
+    public float timeSlowScale;
 }
