@@ -12,8 +12,19 @@ public class PushableObject : MonoBehaviour, ITrampolineTarget, IConveyorBeltTar
     private GameObject pusher;
     private Vector3 pusherVelocity;
 
+    private Vector3 startPosition;
+    private Vector3 startRotation;
+    private int lastLoop;
+
     private float heightFromBounce;
     private bool isBouncing = false;
+
+    private void Start()
+    {
+        startPosition = transform.position;
+        startRotation = transform.rotation.eulerAngles;
+        lastLoop = GameManager.instance.currentLoopCount;
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -23,6 +34,17 @@ public class PushableObject : MonoBehaviour, ITrampolineTarget, IConveyorBeltTar
     private void OnCollisionExit(Collision collision)
     {
         collisions.Remove(collision);
+    }
+
+    private void Update()
+    {
+        if (lastLoop != GameManager.instance.currentLoopCount)
+        {
+            transform.position = startPosition;
+            transform.rotation = Quaternion.Euler(startRotation);
+
+            lastLoop = GameManager.instance.currentLoopCount;
+        }
     }
 
     private void FixedUpdate()
