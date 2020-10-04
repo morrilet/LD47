@@ -76,7 +76,7 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
         RaycastHit hitInfo;
         return Physics.SphereCast(
             transform.position, controller.radius, Vector3.down, out hitInfo, 
-            (controller.height / 2.0f) + controller.skinWidth - controller.radius, groundLayerMask);
+            (controller.height / 2.0f) + (controller.skinWidth * 2.0f) - controller.radius, groundLayerMask);
     }
 
     public void Reset(Vector3 position) {
