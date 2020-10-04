@@ -57,7 +57,7 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
         isTouchingCeilingPrev = isTouchingCeiling;
         isTouchingCeiling = PerformSpherecast(Vector3.up);
 
-        Debug.Log($"ceiling? {isTouchingCeiling} -- ground? {isGrounded} -- {velocity}");
+//        Debug.Log($"ceiling? {isTouchingCeiling} -- ground? {isGrounded} -- {velocity}");
 
         if (isGrounded) {
             currentJumps = 0;
