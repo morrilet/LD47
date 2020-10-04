@@ -32,11 +32,6 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        PlaySound("Boop");
-    }
-
     public void PlaySound(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
@@ -47,5 +42,23 @@ public class AudioManager : MonoBehaviour
             return;
         }
             s.source.Play();
+    }
+
+    public void SetEffectsVolume(float value)
+    {
+        foreach(Sound s in sounds)
+        {
+            if(s.isEffect)
+                s.source.volume = s.volume * value;
+        }
+    }
+
+    public void SetMusicVolume(float value)
+    {
+        foreach(Sound s in sounds)
+        {
+            if (!s.isEffect)
+                s.source.volume = s.volume * value;
+        }
     }
 }
