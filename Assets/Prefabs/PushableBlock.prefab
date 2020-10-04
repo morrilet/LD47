@@ -161,6 +161,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cargo cube
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41b3c500b1ef9fe4e83818f8d637c840,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41b3c500b1ef9fe4e83818f8d637c840, type: 3}
 --- !u!4 &543450653566792008 stripped
