@@ -9,13 +9,8 @@ public class Door : MonoBehaviour
     public Animator animator;
     public FloorButton doorTrigger;
 
-
     private void Update()
     {
-        if (animator == null)
-        {
-            animator = gameObject.GetComponent<Animator>();
-        }
         animator.SetBool("DoorOpen", doorTrigger.Pressed());
     }
 }
