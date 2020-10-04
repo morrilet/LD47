@@ -10,6 +10,10 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] private CanvasGroup optionsMenu;
     [SerializeField] private CanvasGroup levelSelectMenu;
 
+    [Space, Header("Volume Sliders")]
+    [SerializeField] private Slider effectsVolume;
+    [SerializeField] private Slider musicVolume;
+
     [Space, Header("Effects")]
     [SerializeField] private float transitionDuration = 0.2f;
 
@@ -21,6 +25,9 @@ public class MainMenuController : MonoBehaviour
         SetMenuActive(mainMenu, true);
         SetMenuActive(optionsMenu, false);
         SetMenuActive(levelSelectMenu, false);
+
+        effectsVolume.value = effectsVolume.maxValue;
+        musicVolume.value = musicVolume.maxValue;
     }
 
     private void SetMenuActive(CanvasGroup canvas, bool active) {

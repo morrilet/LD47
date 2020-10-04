@@ -2478,6 +2478,8 @@ MonoBehaviour:
   mainMenu: {fileID: 2143277714}
   optionsMenu: {fileID: 555391237}
   levelSelectMenu: {fileID: 1458420731}
+  effectsVolume: {fileID: 1315156157}
+  musicVolume: {fileID: 1117182977}
   transitionDuration: 0.2
 --- !u!1 &1458420729
 GameObject:
