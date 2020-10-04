@@ -1,12 +1,93 @@
 fileFormatVersion: 2
 guid: cbc951cf652b15c419292868b970e2c0
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 140974970534308885
+    second: TimeParticles_0
+  - first:
+      213: 6616441168480077793
+    second: TimeParticles_1
+  - first:
+      213: -2338931832283716596
+    second: TimeParticles_2
+  - first:
+      213: 7255005886618496272
+    second: TimeParticles_3
+  - first:
+      213: 4065985887492433643
+    second: TimeParticles_4
+  - first:
+      213: -9002524508151841819
+    second: TimeParticles_5
+  - first:
+      213: 3701123282536449893
+    second: TimeParticles_6
+  - first:
+      213: 576633078998570066
+    second: TimeParticles_7
+  - first:
+      213: -3270055624668977734
+    second: TimeParticles_8
+  - first:
+      213: 7193779777282219961
+    second: TimeParticles_9
+  - first:
+      213: 6269469581390252131
+    second: TimeParticles_10
+  - first:
+      213: -8579464099563467899
+    second: TimeParticles_11
+  - first:
+      213: -4361329729306223799
+    second: TimeParticles_12
+  - first:
+      213: 7606393230470625359
+    second: TimeParticles_13
+  - first:
+      213: -3058542177476468452
+    second: TimeParticles_14
+  - first:
+      213: -525443175929665049
+    second: TimeParticles_15
+  - first:
+      213: -756276631843002512
+    second: TimeParticles_16
+  - first:
+      213: 5670101013700752891
+    second: TimeParticles_17
+  - first:
+      213: 4930155213064110899
+    second: TimeParticles_18
+  - first:
+      213: 6407012942955460391
+    second: TimeParticles_19
+  - first:
+      213: -3034713781053928776
+    second: TimeParticles_20
+  - first:
+      213: -7339706649462988708
+    second: TimeParticles_21
+  - first:
+      213: 3627297846763144662
+    second: TimeParticles_22
+  - first:
+      213: 2559265429184365527
+    second: TimeParticles_23
+  - first:
+      213: -4577544539024517730
+    second: TimeParticles_24
+  - first:
+      213: 678063277772645291
+    second: TimeParticles_25
+  - first:
+      213: 2895454902268739250
+    second: TimeParticles_26
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,8 +115,8 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -100
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
   nPOTScale: 0
   lightmap: 0
@@ -51,7 +132,7 @@ TextureImporter:
   alphaUsage: 2
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -85,11 +166,347 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: TimeParticles_1
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 1021
+        width: 146
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e78684ff2252db50800000000000000
+      internalID: 6616441168480077793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeParticles_2
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 938
+        width: 169
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0420e604e17a8fd0800000000000000
+      internalID: -2338931832283716596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeParticles_6
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 594
+        width: 125
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 567438d14080d5330800000000000000
+      internalID: 3701123282536449893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeParticles_7
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 611
+        width: 391
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254137feabc900800800000000000000
+      internalID: 576633078998570066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeParticles_8
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 820
+        width: 175
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab566df1cbd6e92d0800000000000000
+      internalID: -3270055624668977734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeParticles_11
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 724
+        width: 209
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b8d4e7bde9fe880800000000000000
+      internalID: -8579464099563467899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeParticles_14
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 492
+        width: 162
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1127fc2810ed85d0800000000000000
+      internalID: -3058542177476468452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeParticles_15
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 616
+        width: 133
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e92f05273045b8f0800000000000000
+      internalID: -525443175929665049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeParticles_16
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 334
+        width: 359
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 077a117096a2185f0800000000000000
+      internalID: -756276631843002512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeParticles_18
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 343
+        width: 143
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3330a329b0e6b6440800000000000000
+      internalID: 4930155213064110899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeParticles_20
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 285
+        width: 172
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba4c4d05e782e5d0800000000000000
+      internalID: -3034713781053928776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeParticles_22
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 50
+        width: 255
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d54bd26c20c65230800000000000000
+      internalID: 3627297846763144662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeParticles_23
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 155
+        width: 89
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3c8782956548320800000000000000
+      internalID: 2559265429184365527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeParticles_24
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 81
+        width: 98
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e951aef9e7b4970c0800000000000000
+      internalID: -4577544539024517730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeParticles_25
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 27
+        width: 146
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba320e665f6f86900800000000000000
+      internalID: 678063277772645291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeParticles_26
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 99
+        width: 483
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2be34e094e8be2820800000000000000
+      internalID: 2895454902268739250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4eba71dfbac1ddd4f8c7cb4fba7238e9
     internalID: 0
     vertices: []
     indices: 
