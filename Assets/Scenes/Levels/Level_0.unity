@@ -1710,6 +1710,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1726601643, guid: 60907af1e7a7ecf4d961a9c49e94a079, type: 3}
+      propertyPath: platformDoubleJumpHeight
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 116478247004826244, guid: 60907af1e7a7ecf4d961a9c49e94a079,
         type: 3}
       propertyPath: m_Enabled
