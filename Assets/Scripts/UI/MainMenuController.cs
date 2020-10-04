@@ -89,6 +89,8 @@ public class MainMenuController : MonoBehaviour
 
     public void SetEffectsVolume(float value) {
         AudioManager.instance.SetEffectsVolume(value);
+
+        AudioManager.instance.PlaySound("Test");
     }
 
     public void SetMusicVolume(float value) {
