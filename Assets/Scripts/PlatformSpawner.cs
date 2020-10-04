@@ -8,6 +8,8 @@ public class PlatformSpawner : MonoBehaviour {
     [SerializeField] private GameObject trampolinePrefab;
     [SerializeField] private GameObject conveyorPrefab;
 
+    [SerializeField] private float platformDoubleJumpHeight;
+
     private bool canPlacePlatform = true;
 
     private void Update() {
@@ -63,5 +65,8 @@ public class PlatformSpawner : MonoBehaviour {
         if (belt != null) {
             belt.direction = (int)Mathf.Sign(player.GetVelocity().x);
         }
+
+        if (!player.isGrounded)
+            player.Bounce(platformDoubleJumpHeight);
     }
 }
