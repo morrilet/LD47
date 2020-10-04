@@ -15,8 +15,15 @@ public class WorldUIController : MonoBehaviour
     [SerializeField] private PoppableUIElementPrefab[] poppableUIElements;
 
     public void SpawnPoppableUIElement(string name) {
-        PoppableUIElementPrefab element = GetPoppableUIElement(name);
-        GameObject.Instantiate(element.prefab, transform.position, Quaternion.identity, transform);
+        SpawnPoppableUIElement(GetPoppableUIElement(name));
+    }
+
+    public void SpawnPoppableUIElement(PoppableUIElementPrefab uiElement) {
+        SpawnPoppableUIElement(uiElement.prefab);
+    }
+
+    public void SpawnPoppableUIElement(GameObject prefab) {
+        GameObject.Instantiate(prefab, transform.position, Quaternion.identity, transform);
     }
 
     private PoppableUIElementPrefab GetPoppableUIElement(string name) {
@@ -27,12 +34,5 @@ public class WorldUIController : MonoBehaviour
 
         Debug.LogWarning($"PoppableUIElement with name '{name}' not found on GameObject called '{gameObject.name}'");
         return new PoppableUIElementPrefab();
-    }
-
-    // For debugging...
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.P)) {
-            SpawnPoppableUIElement("Test");
-        }
     }
 }

@@ -41,7 +41,7 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound of name " + name + " not found!");
             return;
         }
-            s.source.Play();
+        s.source.Play();
     }
 
     public void SetEffectsVolume(float value)
