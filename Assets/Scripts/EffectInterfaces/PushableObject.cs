@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class PushableObject : MonoBehaviour {
+public class PushableObject : MonoBehaviour, ITrampolineTarget, IConveyorBeltTarget {
 
     [SerializeField] private LayerMask geometryLayerMask;
     [SerializeField] private Rigidbody localRigidbody;
@@ -11,6 +11,9 @@ public class PushableObject : MonoBehaviour {
     private bool shouldPush = false;
     private GameObject pusher;
     private Vector3 pusherVelocity;
+
+    private float heightFromBounce;
+    private bool isBouncing = false;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -60,5 +63,16 @@ public class PushableObject : MonoBehaviour {
         }
 
         shouldPush = false;
+    }
+
+    public void Bounce(float bounceHeight)
+    {
+        //TODO: Amplify Horizontal velocity
+        localRigidbody.AddForce(new Vector3(0, bounceHeight * 2, 0), ForceMode.VelocityChange);
+    }
+
+    public void Convey(int direction, float speed)
+    {
+        localRigidbody.AddForce(new Vector3(direction * speed, 0, 0), ForceMode.VelocityChange);
     }
 }
