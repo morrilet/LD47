@@ -11,6 +11,8 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
 
     public bool isGrounded { get; private set; }
     public bool isGroundedPrev { get; private set; }
+    public bool isTouchingCeiling { get; private set; }
+    public bool isTouchingCeilingPrev { get; private set; }
 
     private Vector2 currentInput, prevInput;
     private int currentJumps;
@@ -32,8 +34,12 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
         // We reset the velocity axes separately. Vertical should be cumulative, horizontal should be snappier.
         velocity.x = 0.0f;
 
+        if(isTouchingCeiling && !isTouchingCeilingPrev) {
+            velocity.y = 0;
+        }
+
         if (isGrounded && velocity.y < GlobalVariables.instance.data.gravity * Time.deltaTime) {
-            velocity.y = GlobalVariables.instance.data.gravity * Time.deltaTime;  // Need *SOME* downward input to get `controller.isGrounded` working.
+            velocity.y = 0;  // Need *SOME* downward input to get `controller.isGrounded` working.
         }
     }
 
@@ -44,14 +50,20 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
     }
 
     private void ApplyLogic() {
-        isGrounded = CheckIsGrounded();
+
+        isGroundedPrev = isGrounded;
+        isGrounded = PerformSpherecast(Vector3.down);
+
+        isTouchingCeilingPrev = isTouchingCeiling;
+        isTouchingCeiling = PerformSpherecast(Vector3.up);
+
+        Debug.Log($"ceiling? {isTouchingCeiling} -- ground? {isGrounded} -- {velocity}");
 
         if (isGrounded) {
             currentJumps = 0;
         }
 
         pusher.velocity = velocity;
-        isGroundedPrev = isGrounded;
     }
 
     private void ApplyGravity() {
@@ -72,11 +84,12 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
         }
     }
 
-    private bool CheckIsGrounded() {
+    private bool PerformSpherecast(Vector3 direction) {
         RaycastHit hitInfo;
-        return Physics.SphereCast(
-            transform.position, controller.radius, Vector3.down, out hitInfo, 
-            (controller.height / 2.0f) + (controller.skinWidth * 2.0f) - controller.radius, groundLayerMask);
+        bool hit = Physics.SphereCast(
+            transform.position, controller.radius, direction, out hitInfo, 
+            (controller.height / 2.0f) + (controller.skinWidth * 2.5f) - controller.radius, groundLayerMask);  // 2.5f is *magic*
+        return (hit && !hitInfo.collider.isTrigger);
     }
 
     public void Reset(Vector3 position) {
