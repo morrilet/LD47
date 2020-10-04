@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 94011241}
   - component: {fileID: 94011240}
   - component: {fileID: 94011243}
+  - component: {fileID: 2009713293}
   m_Layer: 5
   m_Name: EmoteCanvas
   m_TagString: Untagged
@@ -111,10 +112,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27910e6e97143ca4e830eac8a7177866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poppableUIElements:
-  - name: Test
-    prefab: {fileID: 7828160103569580975, guid: d4ec3cec631d94e4b9a8b4be220c4d9e,
+  poppableUIElements: []
+--- !u!114 &2009713293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94011238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e90f899aa58594180dd7e078b6dd7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiController: {fileID: 94011243}
+  emoteCooldown: 1
+  emotes:
+  - poppableUIElement: {fileID: 7828160103569580975, guid: d4ec3cec631d94e4b9a8b4be220c4d9e,
       type: 3}
+    audioEffect: Emote1
+  - poppableUIElement: {fileID: 7828160103569580975, guid: d4ec3cec631d94e4b9a8b4be220c4d9e,
+      type: 3}
+    audioEffect: Emote2
+  - poppableUIElement: {fileID: 7828160103569580975, guid: d4ec3cec631d94e4b9a8b4be220c4d9e,
+      type: 3}
+    audioEffect: Emote3
+  - poppableUIElement: {fileID: 7828160103569580975, guid: d4ec3cec631d94e4b9a8b4be220c4d9e,
+      type: 3}
+    audioEffect: Emote4
 --- !u!1 &1726601641
 GameObject:
   m_ObjectHideFlags: 0
