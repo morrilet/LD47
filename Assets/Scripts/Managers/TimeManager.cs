@@ -18,5 +18,7 @@ public class TimeManager : MonoBehaviour
     {
         Time.timeScale = timeScale;
         Time.fixedDeltaTime = timeScale * 0.02f;
+
+        // TODO: Implement the transition duration.
     }
 }

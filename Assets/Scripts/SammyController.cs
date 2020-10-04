@@ -80,8 +80,6 @@ public class SammyController : MonoBehaviour, ITrampolineTarget
     }
 
     public void Reset(Vector3 position) {
-        Debug.Log("RESET PLAYER");
-
         currentJumps = 0;
         currentInput = Vector3.zero;
         prevInput = Vector3.zero;

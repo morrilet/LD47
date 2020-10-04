@@ -40,18 +40,13 @@ public class PlatformSpawner : MonoBehaviour {
     }
 
     private GameObject GetDesiredPlatformPrefab() {
-        Debug.Log(Mathf.Abs(player.GetVelocity().x));
-        Debug.Log(player.isGroundedPrev);
         if (player.isGroundedPrev) {
             if (Mathf.Abs(player.GetVelocity().x) > 0.1f) {
-                Debug.Log("CONVEYOR");
                 return conveyorPrefab;
             } else {
-                Debug.Log("TRAMPOLINE");
                 return trampolinePrefab;
             }
         } else {
-            Debug.Log("PLATFORM");
             return platformPrefab;
         }
     }
