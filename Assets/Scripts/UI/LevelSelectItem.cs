@@ -31,7 +31,7 @@ public class LevelSelectItem : MonoBehaviour {
 [CreateAssetMenu(fileName="LevelSelectItemData", menuName="Data/LevelSelectItemData")]
 public class LevelSelectItemData : ScriptableObject {
     public int sceneBuildIndex;
-    public bool requiresUnlock;
+    public bool requiresUnlock = true;
 
     [Space, Header("Display")]
     public Image displayImage;

@@ -915,16 +915,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7664512888452585466, guid: 571f2eb73a216ab4cba65e39c19cbc82,
-        type: 3}
-      propertyPath: triggers.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7664512888452585466, guid: 571f2eb73a216ab4cba65e39c19cbc82,
-        type: 3}
-      propertyPath: layerMask.m_Bits
-      value: 768
-      objectReference: {fileID: 0}
     - target: {fileID: 7664512888452585467, guid: 571f2eb73a216ab4cba65e39c19cbc82,
         type: 3}
       propertyPath: m_Name
