@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class SpawnedPlatform : MonoBehaviour {
 
+    [SerializeField] private Renderer localRenderer;
     [SerializeField] private int activeLoopDelay;  // The number of loops before we're use-able.
     [SerializeField] private int activeLoopDuration;  // The number of loops we remain use-able.
 
@@ -10,6 +11,8 @@ public class SpawnedPlatform : MonoBehaviour {
     [SerializeField] private GameObject[] persistObjects;
     [SerializeField] private ParticleSystem particleEffect;
     [SerializeField] private float destroyPersistentObjectDelay;
+    [SerializeField] private Material inactiveMaterial;
+    [SerializeField] private Material activeMaterial;
 
     private int startingLoopCount;
     private bool isActive;
@@ -21,6 +24,9 @@ public class SpawnedPlatform : MonoBehaviour {
         for(int i = 0; i < colliders.Length; i++) {
             colliders[i].enabled = false;
         }
+        
+        if (localRenderer != null)
+            localRenderer.material = inactiveMaterial;
     }
 
     private void Update() {
@@ -38,6 +44,8 @@ public class SpawnedPlatform : MonoBehaviour {
             colliders[i].enabled = true;
         }
 
+        if (localRenderer != null)
+            localRenderer.material = activeMaterial;
         particleEffect.Play();
     }
 
