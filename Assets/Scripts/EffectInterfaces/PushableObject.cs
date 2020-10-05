@@ -95,6 +95,6 @@ public class PushableObject : MonoBehaviour, ITrampolineTarget, IConveyorBeltTar
 
     public void Convey(int direction, float speed)
     {
-        localRigidbody.AddForce(new Vector3(direction * speed * 12, 0, 0), ForceMode.VelocityChange);
+        localRigidbody.AddForce(new Vector3(direction * speed * 10, 0, 0), ForceMode.VelocityChange);
     }
 }

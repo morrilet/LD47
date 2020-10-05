@@ -190,6 +190,7 @@ MonoBehaviour:
     type: 3}
   conveyorPrefab: {fileID: 2587370723349724062, guid: 004d91f4e10c3874d80822cb7b9a55ac,
     type: 3}
+  platformDoubleJumpHeight: 4
 --- !u!1 &1932445632
 GameObject:
   m_ObjectHideFlags: 0
