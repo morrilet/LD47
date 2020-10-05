@@ -9,8 +9,14 @@ public class Door : MonoBehaviour
     public Animator animator;
     public FloorButton doorTrigger;
 
+    [SerializeField]
+    private bool inverted = false;
+
     private void Update()
     {
-        animator.SetBool("DoorOpen", doorTrigger.Pressed());
+        if(!inverted)
+            animator.SetBool("DoorOpen", doorTrigger.Pressed());
+        else
+            animator.SetBool("DoorOpen", !doorTrigger.Pressed());
     }
 }

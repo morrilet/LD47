@@ -8,12 +8,23 @@ public class PlatformSpawner : MonoBehaviour {
     [SerializeField] private GameObject trampolinePrefab;
     [SerializeField] private GameObject conveyorPrefab;
 
+    private int platformsThisLoop;
+    private int maxPlatformsPerLoop;
+    private int startingLoopCount;
+
     [SerializeField] private float platformDoubleJumpHeight;
 
     private bool canPlacePlatform = true;
 
+    private void Start()
+    {
+        platformsThisLoop = 0;
+        maxPlatformsPerLoop = 3;
+        startingLoopCount = GameManager.instance.currentLoopCount;
+    }
+
     private void Update() {
-        if (canPlacePlatform) {
+        if (canPlacePlatform && platformsThisLoop < maxPlatformsPerLoop) {
             if (Input.GetButton("Fire3") && Input.GetButton("Jump")) {
                 canPlacePlatform = false;
                 PlacePlatform();
@@ -23,6 +34,11 @@ public class PlatformSpawner : MonoBehaviour {
                 canPlacePlatform = true;
             }
         }
+
+        if (startingLoopCount != GameManager.instance.currentLoopCount)
+            platformsThisLoop = 0;
+
+        startingLoopCount = GameManager.instance.currentLoopCount;
 
         HandleScaleTime();
     }
@@ -68,5 +84,7 @@ public class PlatformSpawner : MonoBehaviour {
 
         if (!player.isGrounded)
             player.Bounce(platformDoubleJumpHeight);
+
+        platformsThisLoop++;
     }
 }

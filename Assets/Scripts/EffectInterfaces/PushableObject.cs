@@ -7,6 +7,8 @@ public class PushableObject : MonoBehaviour, ITrampolineTarget, IConveyorBeltTar
     [SerializeField] private Rigidbody localRigidbody;
     private List<Collision> collisions = new List<Collision>();
 
+    public Pusher localPusher;
+
     private Vector3 velocity;
     private bool shouldPush = false;
     private GameObject pusher;
@@ -42,6 +44,7 @@ public class PushableObject : MonoBehaviour, ITrampolineTarget, IConveyorBeltTar
         {
             transform.position = startPosition;
             transform.rotation = Quaternion.Euler(startRotation);
+            localRigidbody.velocity = new Vector3(0, 0, 0);
 
             lastLoop = GameManager.instance.currentLoopCount;
         }
@@ -61,6 +64,8 @@ public class PushableObject : MonoBehaviour, ITrampolineTarget, IConveyorBeltTar
                 for (int j = 0; j < collisions[i].contactCount; j++)
                     velocity *= 1 - Mathf.Abs(Vector3.Dot(collisions[i].GetContact(j).normal, velocity.normalized));
         }
+
+        localPusher.velocity = velocity;
 
         // Apply velocity to the RB.
         localRigidbody.AddForce(velocity, ForceMode.Force);
@@ -90,11 +95,12 @@ public class PushableObject : MonoBehaviour, ITrampolineTarget, IConveyorBeltTar
     public void Bounce(float bounceHeight)
     {
         //TODO: Amplify Horizontal velocity
-        localRigidbody.AddForce(new Vector3(0, bounceHeight * 2, 0), ForceMode.VelocityChange);
+        localRigidbody.AddForce(new Vector3(0, bounceHeight * 1.2f, 0), ForceMode.VelocityChange);
     }
 
     public void Convey(int direction, float speed)
     {
         localRigidbody.AddForce(new Vector3(direction * speed * 12, 0, 0), ForceMode.VelocityChange);
+        Debug.Log(localRigidbody.velocity);
     }
 }

@@ -28,14 +28,12 @@ public class SpawnedPlatform : MonoBehaviour {
 
         if (!isActive && currentLoop == startingLoopCount + activeLoopDelay)
             Activate();
-        
-        if (isActive && currentLoop == startingLoopCount + activeLoopDelay + activeLoopDuration + 1)
-            Deactivate();
     }
 
     private void Activate() {
         isActive = true;
-        
+        GameManager.instance.EnquePlatform(this);
+
         for(int i = 0; i < colliders.Length; i++) {
             colliders[i].enabled = true;
         }
@@ -43,7 +41,7 @@ public class SpawnedPlatform : MonoBehaviour {
         particleEffect.Play();
     }
 
-    private void Deactivate() {
+    public void Deactivate() {
         isActive = false;
 
         for(int i = 0; i < persistObjects.Length; i++) {
