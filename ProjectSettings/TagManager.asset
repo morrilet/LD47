@@ -16,6 +16,7 @@ TagManager:
   - Player
   - LevelObject
   - Trigger
+  - Camera
   - 
   - 
   - 
@@ -35,8 +36,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - LightModels
   m_SortingLayers:
   - name: Default
     uniqueID: 0
