@@ -277,6 +277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightMaterials:
+  - {fileID: 2100000, guid: 2b7e38c953a4cce4482f9d3620c9094b, type: 2}
   - {fileID: 2100000, guid: 338bdcf9bcc4a064380963367ec5c231, type: 2}
   - {fileID: 2100000, guid: c5082ff2a1e27b848b3dc83648498016, type: 2}
   - {fileID: 2100000, guid: 466191dd0616d644696a6c0f3da667b6, type: 2}

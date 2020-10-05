@@ -9,7 +9,7 @@ public class SammyHeadLights : MonoBehaviour
     [SerializeField] private Renderer localMeshRenderer;
 
     private Material[] materialHolder;
-    private bool active;
+    private bool active = true;
 
     private void Start()
     {
@@ -19,10 +19,10 @@ public class SammyHeadLights : MonoBehaviour
     private void Update()
     {
         if (active) {
-            materialHolder[1] = lightMaterials[3 - localPlatformSpawner.PlatformsThisLoop()];
+            materialHolder[1] = lightMaterials[4 - localPlatformSpawner.PlatformsThisLoop()];
             localMeshRenderer.materials = materialHolder;
         } else {
-            materialHolder[1] = null;
+            materialHolder[1] = lightMaterials[0];
             localMeshRenderer.materials = materialHolder;
         }
     }

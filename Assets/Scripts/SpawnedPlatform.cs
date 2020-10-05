@@ -13,6 +13,7 @@ public class SpawnedPlatform : MonoBehaviour {
     [SerializeField] private float destroyPersistentObjectDelay;
     [SerializeField] private Material inactiveMaterial;
     [SerializeField] private Material activeMaterial;
+    [SerializeField] private GameObject[] activeObjects;
 
     private int startingLoopCount;
     private bool isActive;
@@ -27,6 +28,10 @@ public class SpawnedPlatform : MonoBehaviour {
         
         if (localRenderer != null)
             localRenderer.material = inactiveMaterial;
+
+        for (int i = 0; i < activeObjects.Length; i++) {
+            activeObjects[i].SetActive(false);
+        }
     }
 
     private void Update() {
@@ -46,6 +51,10 @@ public class SpawnedPlatform : MonoBehaviour {
 
         if (localRenderer != null)
             localRenderer.material = activeMaterial;
+
+        for (int i = 0; i < activeObjects.Length; i++) {
+            activeObjects[i].SetActive(true);
+        }
         particleEffect.Play();
     }
 
