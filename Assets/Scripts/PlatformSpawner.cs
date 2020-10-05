@@ -24,7 +24,7 @@ public class PlatformSpawner : MonoBehaviour {
     }
 
     private void Update() {
-        if (canPlacePlatform && platformsThisLoop < maxPlatformsPerLoop) {
+        if (canPlacePlatform && platformsThisLoop < maxPlatformsPerLoop && !player.isGroundedOnLevelObj) {
             if (Input.GetButton("Fire3") && Input.GetButton("Jump")) {
                 canPlacePlatform = false;
                 PlacePlatform();
