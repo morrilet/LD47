@@ -38,8 +38,6 @@ public class GameManager : MonoBehaviour
     {
         if(platformQueue.Count > maxPlatforms)
         {
-            Debug.Log("Max Platforms reached");
-
             SpawnedPlatform oldPlatform = platformQueue.Peek();
             oldPlatform.Deactivate();
             platformQueue.Dequeue();
@@ -47,19 +45,24 @@ public class GameManager : MonoBehaviour
 
         if(Input.GetButton("Restart"))
         {
-            if(resetTimer < resetTimerMax)
-            {
+            if(resetTimer < resetTimerMax) {
                 resetTimer += Time.deltaTime;
+            } else {
+                if (Input.GetButton("Fire3")) {
+                    ResetPlatforms();
+                } else {
+                    KillPlayer();
+                }
+                resetTimer = 0;
             }
-            else
-            {
-                KillPlayer();
+            
+            // Reset the timer if we switch from platform clear to player clear or vice versa.
+            if (Input.GetButtonUp("Fire3") || Input.GetButtonDown("Fire3")) {
                 resetTimer = 0;
             }
         }
 
-        if (Input.GetButtonUp("Restart"))
-        {
+        if (Input.GetButtonUp("Restart")) {
             resetTimer = 0;
         }
     }
@@ -81,5 +84,15 @@ public class GameManager : MonoBehaviour
     public void EnquePlatform(SpawnedPlatform platform)
     {
         platformQueue.Enqueue(platform);
+    }
+
+    public void ResetPlatforms() {
+        // Perf nightmare but I'm past caring. Gotta go fast.
+        SpawnedPlatform[] allPlatforms = Object.FindObjectsOfType<SpawnedPlatform>();
+        Debug.Log(allPlatforms);
+        for (int i = 0; i < allPlatforms.Length; i++) {
+            GameObject.Destroy(allPlatforms[i].gameObject);
+        }
+        platformQueue = new Queue<SpawnedPlatform>();
     }
 }

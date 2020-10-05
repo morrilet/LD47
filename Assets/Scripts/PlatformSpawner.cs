@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class PlatformSpawner : MonoBehaviour {
     [SerializeField] private SammyController player;
@@ -11,6 +12,8 @@ public class PlatformSpawner : MonoBehaviour {
     private int platformsThisLoop;
     private int maxPlatformsPerLoop;
     private int startingLoopCount;
+
+    private List<GameObject> spawnedPlatforms = new List<GameObject>();
 
     public int PlatformsThisLoop() { return platformsThisLoop; }
 
@@ -26,7 +29,6 @@ public class PlatformSpawner : MonoBehaviour {
     }
 
     private void Update() {
-        Debug.Log(canPlacePlatform && platformsThisLoop < maxPlatformsPerLoop && !player.isGroundedOnLevelObj);
         if (!player.isGroundedOnLevelObj && !player.isGroundedOnLevelObjPrev)
         {
             if (canPlacePlatform && platformsThisLoop < maxPlatformsPerLoop) {
