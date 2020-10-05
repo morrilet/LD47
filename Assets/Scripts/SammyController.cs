@@ -10,6 +10,12 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
     [SerializeField] private SammyControllerData data;
     [SerializeField] private Pusher pusher;
 
+    public float horizontalSpeed_Grounded = 6;
+
+    public float horizontalSpeed_Air = 5;
+    public float jumpHeight = 4;
+    public float jumpCount = 1;
+
     public bool isGrounded { get; private set; }
     public bool isGroundedPrev { get; private set; }
     public bool isGroundedOnLevelObj { get; private set; }
@@ -77,14 +83,14 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
     }
 
     private void ApplyHorizontalSpeed() {
-        float horizSpeed = currentInput.x * (isGrounded ? data.horizontalSpeed_Grounded : data.horizontalSpeed_Air);
+        float horizSpeed = currentInput.x * (isGrounded ? horizontalSpeed_Grounded : horizontalSpeed_Air);
         velocity.x += horizSpeed;
     }
 
     private void ApplyVerticalSpeed() {
         if ((currentInput.y > 0 && prevInput.y <= 0) || Input.GetButtonDown("Jump")) {
-            if (isGrounded && currentJumps < data.jumpCount) {
-                velocity.y = Mathf.Sqrt(data.jumpHeight * -2.0f * GlobalVariables.instance.data.gravity);
+            if (isGrounded && currentJumps < jumpCount) {
+                velocity.y = Mathf.Sqrt(jumpHeight * -2.0f * GlobalVariables.instance.data.gravity);
                 currentJumps++;
             }
         }

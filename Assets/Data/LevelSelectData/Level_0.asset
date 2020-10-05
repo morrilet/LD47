@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Level_0
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectItemData
   sceneBuildIndex: 1
-  orderInMenu: 0
+  requiresUnlock: 0
   displayImage: {fileID: 0}
