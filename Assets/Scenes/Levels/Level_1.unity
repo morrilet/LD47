@@ -535,6 +535,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pressure Plate Button
       objectReference: {fileID: 0}
+    - target: {fileID: 77226362780944055, guid: 1c019043f5480e046bc757833dd36e5a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 745781537293392909, guid: 1c019043f5480e046bc757833dd36e5a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -589,6 +594,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3488673757337244506, guid: 1c019043f5480e046bc757833dd36e5a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4307855252732556845, guid: 1c019043f5480e046bc757833dd36e5a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016531731684203674, guid: 1c019043f5480e046bc757833dd36e5a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c019043f5480e046bc757833dd36e5a, type: 3}
@@ -1030,7 +1050,7 @@ PrefabInstance:
     - target: {fileID: 357912136612526334, guid: 03485a10b8610ce4c8f2e7f68cb1ad8d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 68.512535
+      value: 57.822533
       objectReference: {fileID: 0}
     - target: {fileID: 357912136612526334, guid: 03485a10b8610ce4c8f2e7f68cb1ad8d,
         type: 3}
@@ -1060,7 +1080,7 @@ PrefabInstance:
     - target: {fileID: 357912137622206086, guid: 03485a10b8610ce4c8f2e7f68cb1ad8d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 68.512535
+      value: 57.822533
       objectReference: {fileID: 0}
     - target: {fileID: 357912137622206086, guid: 03485a10b8610ce4c8f2e7f68cb1ad8d,
         type: 3}
@@ -1769,7 +1789,7 @@ PrefabInstance:
     - target: {fileID: 5765675094100900499, guid: 60907af1e7a7ecf4d961a9c49e94a079,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 67.49
+      value: 56.8
       objectReference: {fileID: 0}
     - target: {fileID: 5765675094100900499, guid: 60907af1e7a7ecf4d961a9c49e94a079,
         type: 3}
