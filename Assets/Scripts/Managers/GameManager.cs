@@ -95,4 +95,18 @@ public class GameManager : MonoBehaviour
         }
         platformQueue = new Queue<SpawnedPlatform>();
     }
+
+    public void NextLevel()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        if (currentScene.buildIndex < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(currentScene.buildIndex + 1);
+        }
+        else
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
 }
