@@ -5043,7 +5043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggers:
   - {fileID: 8199942942505965180}
-  bounceHeight: 8
+  bounceHeight: 12
 --- !u!114 &1087416883
 MonoBehaviour:
   m_ObjectHideFlags: 0
