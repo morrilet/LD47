@@ -55,17 +55,17 @@ public class PlatformSpawner : MonoBehaviour {
 
         if(Input.GetButtonDown("Fire3") && !player.isGrounded) {
             TimeManager.instance.SetTimeScale(
-                GlobalVariables.instance.data.timeSlowScale, GlobalVariables.instance.data.timeSlowTransitionDuration
+                GlobalVariables.instance.timeSlowScale, GlobalVariables.instance.timeSlowTransitionDuration
             );
         }
         if (Input.GetButtonUp("Fire3") || (player.isGrounded && !player.isGroundedPrev)) {
             TimeManager.instance.SetTimeScale(
-                1.0f, GlobalVariables.instance.data.timeSlowTransitionDuration
+                1.0f, GlobalVariables.instance.timeSlowTransitionDuration
             );
         }
         if (Input.GetButton("Fire3") && (!player.isGrounded && player.isGroundedPrev)) {
             TimeManager.instance.SetTimeScale(
-                GlobalVariables.instance.data.timeSlowScale, GlobalVariables.instance.data.timeSlowTransitionDuration
+                GlobalVariables.instance.timeSlowScale, GlobalVariables.instance.timeSlowTransitionDuration
                 );
         }
     }

@@ -47,7 +47,7 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
             velocity.y = 0;
         }
 
-        if (isGrounded && velocity.y < GlobalVariables.instance.data.gravity * Time.deltaTime) {
+        if (isGrounded && velocity.y < GlobalVariables.instance.gravity * Time.deltaTime) {
             velocity.y = 0;  // Need *SOME* downward input to get `controller.isGrounded` working.
         }
     }
@@ -79,7 +79,7 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
     }
 
     private void ApplyGravity() {
-        velocity.y += GlobalVariables.instance.data.gravity * Time.deltaTime;
+        velocity.y += GlobalVariables.instance.gravity * Time.deltaTime;
     }
 
     private void ApplyHorizontalSpeed() {
@@ -90,7 +90,7 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
     private void ApplyVerticalSpeed() {
         if ((currentInput.y > 0 && prevInput.y <= 0) || Input.GetButtonDown("Jump")) {
             if (isGrounded && currentJumps < jumpCount) {
-                velocity.y = Mathf.Sqrt(jumpHeight * -2.0f * GlobalVariables.instance.data.gravity);
+                velocity.y = Mathf.Sqrt(jumpHeight * -2.0f * GlobalVariables.instance.gravity);
                 currentJumps++;
             }
         }
@@ -119,7 +119,7 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
     
     public void Bounce(float bounceHeight) {
         // Note that this is the same logic as jump but we reset the jump count afterwards.
-        velocity.y = Mathf.Sqrt(bounceHeight * -2.0f * GlobalVariables.instance.data.gravity);
+        velocity.y = Mathf.Sqrt(bounceHeight * -2.0f * GlobalVariables.instance.gravity);
         currentJumps = 0;
     }
 
