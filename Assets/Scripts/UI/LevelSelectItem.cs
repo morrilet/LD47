@@ -2,6 +2,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+[System.Serializable]
+public struct LevelSelectItemData {
+    public int sceneBuildIndex;
+    public bool noUnlockRequired;
+
+    [Space, Header("Display")]
+    public Image displayImage;
+}
+
 public class LevelSelectItem : MonoBehaviour {
     [SerializeField] private LevelSelectItemData levelData;
 
@@ -22,17 +31,8 @@ public class LevelSelectItem : MonoBehaviour {
     }
 
     private bool IsSceneUnlocked() {
-        if (!levelData.requiresUnlock)
+        if (levelData.noUnlockRequired)
             return true;
         return PlayerPrefs.GetInt(SceneManager.GetSceneByBuildIndex(levelData.sceneBuildIndex).name) == 1;
     }
-}
-
-[CreateAssetMenu(fileName="LevelSelectItemData", menuName="Data/LevelSelectItemData")]
-public class LevelSelectItemData : ScriptableObject {
-    public int sceneBuildIndex;
-    public bool requiresUnlock = true;
-
-    [Space, Header("Display")]
-    public Image displayImage;
 }
