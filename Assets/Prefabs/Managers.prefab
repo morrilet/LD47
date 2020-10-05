@@ -317,6 +317,26 @@ PrefabInstance:
       propertyPath: sounds.Array.data[3].volume
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
+        type: 3}
+      propertyPath: sounds.Array.data[0].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
+        type: 3}
+      propertyPath: sounds.Array.data[1].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
+        type: 3}
+      propertyPath: sounds.Array.data[2].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
+        type: 3}
+      propertyPath: sounds.Array.data[3].pitch
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba2e74fa5b8e2924e892043d65947062, type: 3}
 --- !u!4 &3579368703455674942 stripped
