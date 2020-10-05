@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8478143320992239511}
   - component: {fileID: 4274869410456103536}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ramp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2704657636675160379}
   - component: {fileID: 3033678975290953374}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ramp (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 7664512888178948555}
   - component: {fileID: 7664512888178948552}
   - component: {fileID: 7664512888178948553}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7664512888452585445}
   - component: {fileID: 7664512888452585466}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 7664512890099654888}
   - component: {fileID: 7664512890099654889}
   - component: {fileID: 7664512890099654894}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

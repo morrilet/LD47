@@ -1202,6 +1202,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2128923617395981201, guid: 571f2eb73a216ab4cba65e39c19cbc82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125120148773777206, guid: 571f2eb73a216ab4cba65e39c19cbc82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664512888178948559, guid: 571f2eb73a216ab4cba65e39c19cbc82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7664512888452585445, guid: 571f2eb73a216ab4cba65e39c19cbc82,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1261,6 +1276,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664512888452585467, guid: 571f2eb73a216ab4cba65e39c19cbc82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664512889096019832, guid: 571f2eb73a216ab4cba65e39c19cbc82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664512890099654892, guid: 571f2eb73a216ab4cba65e39c19cbc82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 571f2eb73a216ab4cba65e39c19cbc82, type: 3}

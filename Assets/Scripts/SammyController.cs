@@ -13,6 +13,7 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
     public bool isGrounded { get; private set; }
     public bool isGroundedPrev { get; private set; }
     public bool isGroundedOnLevelObj { get; private set; }
+    public bool isGroundedOnLevelObjPrev { get; private set; }
     public bool isTouchingCeiling { get; private set; }
     public bool isTouchingCeilingPrev { get; private set; }
 
@@ -55,6 +56,8 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
 
         isGroundedPrev = isGrounded;
         isGrounded = PerformSpherecast(Vector3.down, groundLayerMask);
+
+        isGroundedOnLevelObjPrev = isGroundedOnLevelObj;
         isGroundedOnLevelObj = PerformSpherecast(Vector3.down, placementExclusionLayermask);
 
         isTouchingCeilingPrev = isTouchingCeiling;

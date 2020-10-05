@@ -12,6 +12,8 @@ public class PlatformSpawner : MonoBehaviour {
     private int maxPlatformsPerLoop;
     private int startingLoopCount;
 
+    public int PlatformsThisLoop() { return platformsThisLoop; }
+
     [SerializeField] private float platformDoubleJumpHeight;
 
     private bool canPlacePlatform = true;
@@ -24,14 +26,18 @@ public class PlatformSpawner : MonoBehaviour {
     }
 
     private void Update() {
-        if (canPlacePlatform && platformsThisLoop < maxPlatformsPerLoop && !player.isGroundedOnLevelObj) {
-            if (Input.GetButton("Fire3") && Input.GetButton("Jump")) {
-                canPlacePlatform = false;
-                PlacePlatform();
-            }
-        } else {
-            if (Input.GetButtonUp("Jump")) {
-                canPlacePlatform = true;
+        Debug.Log(canPlacePlatform && platformsThisLoop < maxPlatformsPerLoop && !player.isGroundedOnLevelObj);
+        if (!player.isGroundedOnLevelObj && !player.isGroundedOnLevelObjPrev)
+        {
+            if (canPlacePlatform && platformsThisLoop < maxPlatformsPerLoop) {
+                if (Input.GetButton("Fire3") && Input.GetButtonDown("Jump")) {
+                    canPlacePlatform = false;
+                    PlacePlatform();
+                }
+            } else {
+                if (Input.GetButtonUp("Jump")) {
+                    canPlacePlatform = true;
+                }
             }
         }
 

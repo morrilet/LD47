@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public int currentLoopCount { get; private set; }
 
     [SerializeField] private SammyController player;
+
     private Vector3 respawnPosition;
 
     private void Awake() {
