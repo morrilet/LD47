@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class GlobalVariables : MonoBehaviour
 {
+    public float gravity = -49.05f;
+    public float timeSlowScale = 0.25f;
+    public float timeSlowTransitionDuration = 0.25f;
+
     public static GlobalVariables instance;
-    public GlobalVariablesData data;
 
     private void Awake() {
         if (instance == null) {
@@ -14,12 +17,4 @@ public class GlobalVariables : MonoBehaviour
             GameObject.DestroyImmediate(this);
         }
     }
-}
-
-[CreateAssetMenu(fileName="GlobalVariablesData", menuName="Data/GlobalVariablesData")]
-public class GlobalVariablesData : ScriptableObject {
-
-    public float gravity;
-    public float timeSlowScale;
-    public float timeSlowTransitionDuration;
 }
