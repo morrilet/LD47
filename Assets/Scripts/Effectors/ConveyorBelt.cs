@@ -11,7 +11,7 @@ public class ConveyorBelt : Effector
     {
         Vector3 directionHolder = transform.localScale;
 
-        directionHolder.x = directionHolder.x * direction;
+        directionHolder.x = directionHolder.x * direction * -1;
 
         transform.localScale = directionHolder;
     }
