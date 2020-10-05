@@ -128,13 +128,13 @@ MonoBehaviour:
   uiController: {fileID: 94011243}
   emoteCooldown: 1
   emotes:
-  - poppableUIElement: {fileID: 7828160103569580975, guid: d4ec3cec631d94e4b9a8b4be220c4d9e,
+  - poppableUIElement: {fileID: 7828160103569580975, guid: 541c9a81eb58709498de5f1ed2a1f449,
       type: 3}
     audioEffect: Emote1
-  - poppableUIElement: {fileID: 7828160103569580975, guid: d4ec3cec631d94e4b9a8b4be220c4d9e,
+  - poppableUIElement: {fileID: 7828160103569580975, guid: 85a0269af53f1c04da298935be8d20d7,
       type: 3}
     audioEffect: Emote2
-  - poppableUIElement: {fileID: 7828160103569580975, guid: d4ec3cec631d94e4b9a8b4be220c4d9e,
+  - poppableUIElement: {fileID: 7828160103569580975, guid: 92b957c37c95ff345b433c81411088d1,
       type: 3}
     audioEffect: Emote3
   - poppableUIElement: {fileID: 7828160103569580975, guid: d4ec3cec631d94e4b9a8b4be220c4d9e,
