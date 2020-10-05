@@ -1683,6 +1683,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2135985339}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2144973857 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1726601643, guid: 60907af1e7a7ecf4d961a9c49e94a079,
+    type: 3}
+  m_PrefabInstance: {fileID: 1562125494}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b7a192f1473a674a82785f6b33a4d71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &357912136468272522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2000,3 +2012,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56efd4795982d0b49ad07ca722b3e037, type: 3}
+--- !u!1 &5318644867698717308 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149507166016, guid: 60907af1e7a7ecf4d961a9c49e94a079,
+    type: 3}
+  m_PrefabInstance: {fileID: 1562125494}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &5318644867698717309 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1551100668366480658, guid: 60907af1e7a7ecf4d961a9c49e94a079,
+    type: 3}
+  m_PrefabInstance: {fileID: 1562125494}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5318644867698717310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5318644867698717308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b6f4b75e681f884da41f22e1146d020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightMaterials:
+  - {fileID: 2100000, guid: 338bdcf9bcc4a064380963367ec5c231, type: 2}
+  - {fileID: 2100000, guid: c5082ff2a1e27b848b3dc83648498016, type: 2}
+  - {fileID: 2100000, guid: 466191dd0616d644696a6c0f3da667b6, type: 2}
+  - {fileID: 2100000, guid: 54e520d11c6c37c428054766d00647cc, type: 2}
+  localPlatformSpawner: {fileID: 2144973857}
+  localMeshRenderer: {fileID: 5318644867698717309}
