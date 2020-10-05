@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
         respawnPosition = player.transform.position;
         platformQueue = new Queue<SpawnedPlatform>();
         resetTimerMax = 1f;
+
+        AudioManager.instance.PlaySound("MainMusic");
     }
 
     private void Update()

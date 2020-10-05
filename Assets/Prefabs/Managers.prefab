@@ -235,7 +235,7 @@ PrefabInstance:
     - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
         type: 3}
       propertyPath: sounds.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
         type: 3}
@@ -335,6 +335,36 @@ PrefabInstance:
     - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
         type: 3}
       propertyPath: sounds.Array.data[3].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
+        type: 3}
+      propertyPath: sounds.Array.data[4].name
+      value: MainMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
+        type: 3}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: ed4c78addccb990439f60b6085893027, type: 3}
+    - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
+        type: 3}
+      propertyPath: sounds.Array.data[4].isEffect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
+        type: 3}
+      propertyPath: sounds.Array.data[4].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
+        type: 3}
+      propertyPath: sounds.Array.data[4].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
+        type: 3}
+      propertyPath: sounds.Array.data[4].loop
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
