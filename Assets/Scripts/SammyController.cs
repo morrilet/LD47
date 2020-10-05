@@ -6,11 +6,14 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
 {
     [SerializeField] private CharacterController controller;
     [SerializeField] private LayerMask groundLayerMask;
+    [SerializeField] private LayerMask placementExclusionLayermask;
     [SerializeField] private SammyControllerData data;
     [SerializeField] private Pusher pusher;
 
     public bool isGrounded { get; private set; }
     public bool isGroundedPrev { get; private set; }
+    public bool isGroundedOnLevelObj { get; private set; }
+    public bool isGroundedOnLevelObjPrev { get; private set; }
     public bool isTouchingCeiling { get; private set; }
     public bool isTouchingCeilingPrev { get; private set; }
 
@@ -52,10 +55,13 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
     private void ApplyLogic() {
 
         isGroundedPrev = isGrounded;
-        isGrounded = PerformSpherecast(Vector3.down);
+        isGrounded = PerformSpherecast(Vector3.down, groundLayerMask);
+
+        isGroundedOnLevelObjPrev = isGroundedOnLevelObj;
+        isGroundedOnLevelObj = PerformSpherecast(Vector3.down, placementExclusionLayermask);
 
         isTouchingCeilingPrev = isTouchingCeiling;
-        isTouchingCeiling = PerformSpherecast(Vector3.up);
+        isTouchingCeiling = PerformSpherecast(Vector3.up, groundLayerMask);
 
 //        Debug.Log($"ceiling? {isTouchingCeiling} -- ground? {isGrounded} -- {velocity}");
 
@@ -84,11 +90,11 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
         }
     }
 
-    private bool PerformSpherecast(Vector3 direction) {
+    private bool PerformSpherecast(Vector3 direction, LayerMask mask) {
         RaycastHit hitInfo;
         bool hit = Physics.SphereCast(
             transform.position, controller.radius, direction, out hitInfo, 
-            (controller.height / 2.0f) + (controller.skinWidth * 2.5f) - controller.radius, groundLayerMask);  // 2.5f is *magic*
+            (controller.height / 2.0f) + (controller.skinWidth * 2.5f) - controller.radius, mask);  // 2.5f is *magic*
         return (hit && !hitInfo.collider.isTrigger);
     }
 
