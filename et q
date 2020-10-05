@@ -1,0 +1,548 @@
+[33mcommit ac6e54e9d06285ae95bc8df2da61dcb59f5a8f4c[m[33m ([m[1;36mHEAD -> [m[1;32mdevelop[m[33m)[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Mon Oct 5 01:51:49 2020 -0400
+
+    WIP: Run animation
+
+[33mcommit 7ce0b8c1bc351530bececd5db04ad52fb101da64[m
+Merge: 8613207 b4dd441
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 21:46:57 2020 -0400
+
+    Merge branch 'Lextalionis-assets-1' of https://github.com/morrilet/LD47 into develop
+
+[33mcommit 86132071c61cb6e6376c4860c84393bba9491318[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 21:46:38 2020 -0400
+
+    WIP: Pedestal
+
+[33mcommit b4dd441fa9e2d2348bd39e9a72ee865410e0f926[m
+Author: Lextalionis <theseangreer@gmail.com>
+Date:   Sun Oct 4 20:44:12 2020 -0500
+
+    Add files via upload
+    
+    Sammy has a walk and weird leg joint issue
+
+[33mcommit b62a4b8669cdcd5752ba702038c3bd9f54295c2c[m
+Author: Lextalionis <theseangreer@gmail.com>
+Date:   Sun Oct 4 19:42:03 2020 -0500
+
+    Add files via upload
+    
+    This is the good gravity plate
+
+[33mcommit 496473fd8d6d0790ef2b093c077a327c540bc0fe[m
+Author: Lextalionis <theseangreer@gmail.com>
+Date:   Sun Oct 4 19:12:37 2020 -0500
+
+    Add files via upload
+    
+    Temporal Platform and Gravity Plate. Note that both are 3x3 with origins where Sammy's origin should be when it spawns. Gravity plate sinks 0.5 m into the ground, Plus shaped polygon will be transparent VFX. (Like man cannon)
+
+[33mcommit e35d3986abd1c4caa7e6e9bd5b5187958e7bcc33[m
+Author: Lextalionis <theseangreer@gmail.com>
+Date:   Sun Oct 4 18:55:06 2020 -0500
+
+    Add files via upload
+    
+    Temporal Platform, no meta
+
+[33mcommit f09eb207915a83a9edb6cb44d472a0640672afb6[m
+Merge: ba7746f 811e23c
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sun Oct 4 18:26:01 2020 -0500
+
+    Merge branch 'develop' of https://github.com/morrilet/LD47 into develop
+
+[33mcommit ba7746f8ff3b05d75c25043ce9714afa9d8cd966[m
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sun Oct 4 18:25:52 2020 -0500
+
+    gave sound effects a default pitch of 1
+
+[33mcommit 811e23c7c0f3b805158df2a359d6ed39fa892971[m
+Merge: 56af8b7 870d1d0
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 19:20:06 2020 -0400
+
+    Merge branch 'develop' of https://github.com/morrilet/LD47 into develop
+
+[33mcommit 56af8b76bfdea8a712877bc64c2e3c45bf05448f[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 19:19:53 2020 -0400
+
+    Player emotes
+
+[33mcommit 870d1d08c30a01c98fb35d029e62ff9b6e7d7521[m
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sun Oct 4 18:07:51 2020 -0500
+
+    Added platform placement double jumps in a place that will probably really upset Ethan when he sees it.
+
+[33mcommit 1ad9789d69abde43b95b6f0a1ce64f6b4794d5ee[m
+Merge: 80e99d5 30befe3
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 18:32:25 2020 -0400
+
+    Merge branch 'develop' of https://github.com/morrilet/LD47 into develop
+
+[33mcommit 80e99d5f2c3848b0f027c0d34da0bebda7b4cd45[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 18:32:02 2020 -0400
+
+    WIP: Emote controls
+
+[33mcommit 30befe39bba941083a6ebafe8bd19f7242e1dd72[m
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sun Oct 4 17:21:43 2020 -0500
+
+    Added lerp to timescale
+
+[33mcommit 2a52408bfb49331df2676b239871d6c098a989ff[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 17:14:08 2020 -0400
+
+    Add UMotion, WIP: Sammy updates
+
+[33mcommit e8f675b5e175c83203d851a468c314f1cc5ba607[m
+Merge: 1f3f3a0 f9793e5
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 16:27:04 2020 -0400
+
+    Merge branch 'develop' of https://github.com/morrilet/LD47 into develop
+
+[33mcommit 1f3f3a037e3259ebd38c3f80fac51eec98e24111[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 16:26:55 2020 -0400
+
+    WIP: Lighting tests
+
+[33mcommit f9793e5fc012cfc159e1cf88e3208a3fa993412a[m
+Merge: b129af9 71e91f4
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sun Oct 4 15:06:53 2020 -0500
+
+    Merge branch 'develop' of https://github.com/morrilet/LD47 into develop
+
+[33mcommit b129af9e5a08290ff68db119f3ff59d484d416bd[m
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sun Oct 4 15:06:02 2020 -0500
+
+    Made crates reset at the start of each loop
+
+[33mcommit 71e91f42f1d70cd8b3042e0b4dac8d63cd221e8f[m
+Merge: 6d214a5 103cf98
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 15:40:52 2020 -0400
+
+    Merge branch 'develop' of https://github.com/morrilet/LD47 into develop
+
+[33mcommit 6d214a554f258098e3958c085ed6b1da9bb04c7e[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 15:40:40 2020 -0400
+
+    Fix door reference issue
+
+[33mcommit 103cf9879deb4bdaf52a333be31d758ddc1581ff[m
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sun Oct 4 14:33:38 2020 -0500
+
+    Added light flickering script
+
+[33mcommit 1a4a3d27acb57b97807bed8d16828c443b3b5704[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 15:30:18 2020 -0400
+
+    Update platform prefabs
+
+[33mcommit 40d8bf7912ed5659e2afd2bdce0bb155b0b7a08f[m
+Merge: e397d4d a1df1b5
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 15:26:14 2020 -0400
+
+    Merge branch 'develop' of https://github.com/morrilet/LD47 into develop
+
+[33mcommit e397d4dec7f4bec5ee64bf8cce98d5fb7188e225[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 15:26:07 2020 -0400
+
+    Particle updates
+
+[33mcommit a1df1b5a8f4ab6c00710f16f6cb9968f65d4b70f[m
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sun Oct 4 14:12:14 2020 -0500
+
+    Added new door to level 0 and removed old door prefab
+
+[33mcommit 1d2aab09f005233a40c714faa4f4b15e8368769c[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 14:37:15 2020 -0400
+
+    WIP: Particle updates
+
+[33mcommit 67b2d5d2384842da1133de7843ab7d1e535be522[m
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sun Oct 4 13:24:57 2020 -0500
+
+    animated security doors
+
+[33mcommit b1fae642ae10560cbdd6d7a9a390e61498a85447[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 14:18:21 2020 -0400
+
+    Update pushable block model
+
+[33mcommit 46ee7a90a88366f91989afff2db0b914898192fd[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 14:03:11 2020 -0400
+
+    Poppable UI elements, world UI
+
+[33mcommit 69a1dd499c5595c50361281bf2f66ead71037150[m
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sun Oct 4 12:14:53 2020 -0500
+
+    Set default value for audio menu sliders and made cargo crate prefab
+
+[33mcommit 1e8cc2255aa7f574792a273fcc766ac32a07f203[m
+Merge: fd31816 98fb066
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sun Oct 4 11:54:59 2020 -0500
+
+    Merge branch 'develop' of https://github.com/morrilet/LD47 into develop
+
+[33mcommit fd31816a82dfb9cd58e5c6858729adb79d1174a8[m
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sun Oct 4 11:54:46 2020 -0500
+
+    Gave crates a conveyor belt multiplier to make the effect more pronounced
+
+[33mcommit 98fb066b878215d254cde427c2f6cedf4054b1ff[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 12:48:13 2020 -0400
+
+    Add ceiling check, tweak door animation, move triggers to new layer
+
+[33mcommit d08405dbd66b7477d60954174191a72dd96871d0[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 12:05:06 2020 -0400
+
+    Tweak isGrounded check
+
+[33mcommit d5d17f2fd9857750dbd0432847aa3929027c926e[m
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sun Oct 4 11:02:11 2020 -0500
+
+    Fixed button layermask and collider
+
+[33mcommit 859204daf52bcc96683d04efba5c91651be1ee1d[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 11:33:59 2020 -0400
+
+    Set default for 'requiresUnlock'
+
+[33mcommit 7ad83591dc480284fd24f9b3390b9f4ac0fbd1b5[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 11:32:52 2020 -0400
+
+    Fix jumping, WIP Level_0, scene locking, rename button
+
+[33mcommit 0bcb23015ab613154a047747ec302b7a8553211e[m
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sun Oct 4 00:52:37 2020 -0500
+
+    Fixed Conveyor prefab
+
+[33mcommit 60cd55b7e286b2de515c0397f3eca3447e51ffaf[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 01:47:44 2020 -0400
+
+    Model meta files
+
+[33mcommit a21f803a252a868b6c5d3becf9d1f5e4eb3532f2[m
+Merge: c014237 a89c307
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 01:46:57 2020 -0400
+
+    Merge branch 'Lextalionis-assets-1' of https://github.com/morrilet/LD47 into develop
+
+[33mcommit c014237da6a95db40a8662be69a816bb39d85464[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 01:37:10 2020 -0400
+
+    Add basic Cinemachine camera
+
+[33mcommit 08ba4a703f4f198315a8207eb994aa67333690a3[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 00:19:55 2020 -0400
+
+    Add dynamic direction to conveyor belts
+
+[33mcommit 609c38074c18dceca47a0776b460571d10ab3b32[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sun Oct 4 00:09:03 2020 -0400
+
+    Add conveyor belt to spawner system
+
+[33mcommit d6de01a7216fb4e682c73b85620b7c14321ce5c6[m
+Merge: a6fd7b9 27adc09
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sat Oct 3 23:36:18 2020 -0400
+
+    Merge branch 'develop' of https://github.com/morrilet/LD47 into develop
+
+[33mcommit a6fd7b9aa62699bcf53b42e2e38b45fab52f9e1e[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sat Oct 3 23:36:01 2020 -0400
+
+    Platform activation within loop system
+
+[33mcommit 27adc093cd02f1dbdae21600824cb30411669b47[m
+Merge: a27deb5 33fdc65
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sat Oct 3 22:33:45 2020 -0500
+
+    Merge branch 'develop' of https://github.com/morrilet/LD47 into develop
+
+[33mcommit a27deb562653146b274c81b9119ee1ec88ddd712[m
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sat Oct 3 22:33:25 2020 -0500
+
+    Added trampoline logic to pushables and conveyor belt logic to player.
+
+[33mcommit 33fdc6555fca6c8a12d44f6160cc0f2d79648df3[m
+Merge: 496f52f df1bb24
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sat Oct 3 22:26:46 2020 -0400
+
+    Merge branch 'develop' of https://github.com/morrilet/LD47 into develop
+
+[33mcommit 496f52f5a13057ca7f206c48aa59871f020cdc5c[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sat Oct 3 22:26:27 2020 -0400
+
+    Platform spawning
+
+[33mcommit a89c3073606f6346bbf5700051d4bcf749f51948[m
+Author: Lextalionis <theseangreer@gmail.com>
+Date:   Sat Oct 3 19:44:55 2020 -0500
+
+    Add files via upload
+    
+    No metas. Note that the pressure plate button has two objects: the large block embedded in the group that will display either a red X or green O on the large display to indicate whether it's active, and the small pressure plate that blocks get slid onto that is its own object for simple animation of the button.
+
+[33mcommit df1bb24bf5a15f096221eda7f0c80d08172ff189[m
+Merge: 93f16f2 798d041
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sat Oct 3 19:09:46 2020 -0500
+
+    Merge branch 'develop' of https://github.com/morrilet/LD47 into develop
+
+[33mcommit 93f16f26edff758dde1a77c2bae9913b666b0e55[m
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sat Oct 3 19:09:24 2020 -0500
+
+    Hooked AudioManager into menus
+
+[33mcommit 798d041fdd8848641119efb0a66e64dea8797931[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sat Oct 3 19:17:51 2020 -0400
+
+    MurderZone prefab, WIP: looping mechanic
+
+[33mcommit c85126ca57ce595ccc1299a04df517d7d7469fcd[m
+Merge: d4346e9 3e14874
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sat Oct 3 17:23:19 2020 -0500
+
+    Merge branch 'develop' of https://github.com/morrilet/LD47 into develop
+
+[33mcommit d4346e9e55aeb54680637bcda3d126754b6339f9[m
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sat Oct 3 17:23:02 2020 -0500
+
+    Changed button logic so all non-geometry elements can trigger them.
+
+[33mcommit 3e14874474160cb287122a9da45eb7bf6be24e57[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sat Oct 3 17:58:03 2020 -0400
+
+    Remove PushableBlock.cs
+
+[33mcommit 114a72127976da576016e3109318b68c8e981946[m
+Merge: 6d434a3 e45160b
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sat Oct 3 17:56:52 2020 -0400
+
+    Merge branch 'develop' of https://github.com/morrilet/LD47 into develop
+
+[33mcommit 6d434a38c848ea41333e489379b33e77dd2bd732[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sat Oct 3 17:55:19 2020 -0400
+
+    Refactor moving blocks
+
+[33mcommit e45160b8198fb6d1a5cbbdea03430c28c2f03029[m
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sat Oct 3 16:52:32 2020 -0500
+
+    Added prefabs for doors and buttons
+
+[33mcommit f931be015a9ef83d4a2059c3164efa6d16757c3f[m
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sat Oct 3 16:30:19 2020 -0500
+
+    Added Doors
+
+[33mcommit 601cfa90ad37c67aa1e4863eb95b65982976b964[m
+Merge: 08b53da a67c591
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sat Oct 3 14:28:31 2020 -0500
+
+    Merge branch 'develop' of https://github.com/morrilet/LD47 into develop
+
+[33mcommit 08b53daed514ec57b81f7e60ecd6792130f9e1be[m
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sat Oct 3 14:28:09 2020 -0500
+
+    Started pushable blocks
+
+[33mcommit a67c59143f95657bcaace49bd42a8cd6d813292a[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sat Oct 3 13:52:24 2020 -0400
+
+    Add level select menu
+
+[33mcommit b006cdb6e34d9c888cbb511c3b2ec547927e5fcc[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sat Oct 3 12:01:01 2020 -0400
+
+    Re-reference data files
+
+[33mcommit 06a16f801b7725fda5a0fab064e29f970f37100f[m
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sat Oct 3 10:50:41 2020 -0500
+
+    Added TimeManager
+
+[33mcommit 67cf28656743e18eac768976d7a2614c8d526fb7[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sat Oct 3 11:37:06 2020 -0400
+
+    Add effectors, trampoline
+
+[33mcommit 9d10d9a1512daa0077baaf5bbf63a29bd937f67c[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sat Oct 3 10:54:55 2020 -0400
+
+    SammyController cleanup
+
+[33mcommit f802751099be9b4f3ea124caacf00ebc6e71fc39[m
+Author: Lextalionis <theseangreer@gmail.com>
+Date:   Sat Oct 3 03:19:12 2020 -0500
+
+    Door, cube, and emergency light
+    
+    All need meta, none have textures
+
+[33mcommit 8c45c2f8119565b34376a88b7890eee796e79433[m
+Author: Lextalionis <theseangreer@gmail.com>
+Date:   Sat Oct 3 01:15:15 2020 -0500
+
+    Security Door Top and Bottom
+    
+    No textures. Needs meta.
+
+[33mcommit 619610af5e6ab25eb028e2ef37b6a1c92b679337[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sat Oct 3 01:57:42 2020 -0400
+
+    Re-Update SammyController, add .meta files for folders
+
+[33mcommit 494b0ef76990ce64e16489284df3727ee810030f[m
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Sat Oct 3 00:45:33 2020 -0500
+
+    Added AudioManager
+
+[33mcommit b5362b9e97772ea06c30be201e43444cd0fc1a54[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sat Oct 3 01:12:12 2020 -0400
+
+    Add robot 2 meta
+
+[33mcommit ab18c8a3c8abfe3b6b17af74965ce6fcd2ae55b3[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sat Oct 3 01:09:12 2020 -0400
+
+    Add plugins, robot .meta
+
+[33mcommit 60801d17b66869814b86cc82d8072b569a9cc1d6[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Sat Oct 3 01:07:45 2020 -0400
+
+    Revert "Added AudioManager"
+    
+    This reverts commit 2446cee7f7abb026091f421230213fa25f2db67f.
+
+[33mcommit c590f9d0009edfc1bdfd8843673c96b91a89f248[m
+Author: Lextalionis <theseangreer@gmail.com>
+Date:   Sat Oct 3 00:02:15 2020 -0500
+
+    Simple mesh, rig, and Walk cycle
+    
+    A-pose and Walk cycle.
+    Vertex weight issues makes me worried that it's got problems in motion. Looks okay in Blender tho.
+
+[33mcommit 2446cee7f7abb026091f421230213fa25f2db67f[m
+Author: unknown <JIHlucky7@gmail.com>
+Date:   Fri Oct 2 23:48:07 2020 -0500
+
+    Added AudioManager
+
+[33mcommit e66b678b83ea36e80224496da77a13654eee3df7[m
+Merge: 4de9b8a 6e1087c
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Fri Oct 2 22:46:07 2020 -0400
+
+    Merge branch 'develop' of https://github.com/morrilet/LD47 into develop
+
+[33mcommit 4de9b8a3e7405cddd5c51d4e4332dfe2f37eb3e4[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Fri Oct 2 22:44:44 2020 -0400
+
+    WIP: Character controller
+
+[33mcommit 6e1087cd268cc7017d6b56e7a22418bb2d411a57[m
+Author: Lextalionis <theseangreer@gmail.com>
+Date:   Fri Oct 2 20:15:35 2020 -0500
+
+    No-Rig Basic Sammy Model
+    
+    May be useful for dimensions, etc?
+
+[33mcommit 6cb37fda8f09380d4d6b6c69cde8ee8e33d38029[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Wed Sep 30 23:56:45 2020 -0400
+
+    Basic MainMenu interface
+
+[33mcommit ad22a2e2127d97357ff743d0a458c9037bba4d97[m
+Author: Ethan <findwaldoFTLOG@gmail.com>
+Date:   Wed Sep 30 19:10:04 2020 -0400
+
+    Initial Project Structure
+
+[33mcommit e9257fd352f661b383b01391367d3e98e7c43094[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: morrilet <findwaldoFTLOG@gmail.com>
+Date:   Wed Sep 30 18:50:53 2020 -0400
+
+    Update README.md
+
+[33mcommit f80fe3804772985a1eb0ac14445374147486fab8[m
+Author: morrilet <findwaldoFTLOG@gmail.com>
+Date:   Wed Sep 30 18:22:32 2020 -0400
+
+    Initial commit
