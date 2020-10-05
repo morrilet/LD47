@@ -8,7 +8,7 @@ public class CharacterAnimator : MonoBehaviour {
 
     private const float RIGHT_ROTATION = 90.0f;
     private const float LEFT_ROTATION = 260.0f;
-    private float currentTarget;
+    private float currentTarget = RIGHT_ROTATION;
 
     // TODO: Translate character movements into animation triggers. Alternatively, feed character controller data to
     //       the animator and it'll handle it's own transitions. That's probably best.
