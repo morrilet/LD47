@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -62,8 +63,9 @@ public class MainMenuController : MonoBehaviour
     /* -~-~-~-~- MENU API -~-~-~-~- */
     
     public void Play() {
-        StartCoroutine(SetMenuActiveCoroutine(mainMenu, false, transitionDuration));
-        StartCoroutine(SetMenuActiveCoroutine(levelSelectMenu, true, transitionDuration, transitionDuration));
+        SceneManager.LoadScene(1);
+        // StartCoroutine(SetMenuActiveCoroutine(mainMenu, false, transitionDuration));
+        // StartCoroutine(SetMenuActiveCoroutine(levelSelectMenu, true, transitionDuration, transitionDuration));
     }
 
     public void Quit() {

@@ -102,7 +102,7 @@ public class GameManager : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
 
-        if (currentScene.buildIndex < SceneManager.sceneCountInBuildSettings)
+        if (currentScene.buildIndex < SceneManager.sceneCountInBuildSettings - 1)
         {
             SceneManager.LoadScene(currentScene.buildIndex + 1);
         }
