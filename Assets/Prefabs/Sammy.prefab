@@ -426,6 +426,10 @@ MonoBehaviour:
     m_Bits: 512
   data: {fileID: 11400000, guid: 22a2c9f3b31d51a4689c44e2d3452381, type: 2}
   pusher: {fileID: 981033080}
+  horizontalSpeed_Grounded: 6
+  horizontalSpeed_Air: 5
+  jumpHeight: 4
+  jumpCount: 1
 --- !u!54 &5765675094100900509
 Rigidbody:
   m_ObjectHideFlags: 0

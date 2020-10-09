@@ -10,6 +10,10 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager instance;
 
+    // TODO: Load these values from PlayerPrefs in Start().
+    [HideInInspector] public float masterMusicVolume = 1.0f;
+    [HideInInspector] public float masterEffectVolume = 1.0f;
+
     void Awake()
     {
         if (instance == null)
@@ -41,24 +45,17 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound of name " + name + " not found!");
             return;
         }
+        s.source.volume = s.volume * (s.isEffect ? masterEffectVolume : masterMusicVolume);
         s.source.Play();
     }
 
     public void SetEffectsVolume(float value)
     {
-        foreach(Sound s in sounds)
-        {
-            if(s.isEffect)
-                s.source.volume = s.volume * value;
-        }
+        masterEffectVolume = value;
     }
 
     public void SetMusicVolume(float value)
     {
-        foreach(Sound s in sounds)
-        {
-            if (!s.isEffect)
-                s.source.volume = s.volume * value;
-        }
+        masterMusicVolume = value;
     }
 }

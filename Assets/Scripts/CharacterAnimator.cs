@@ -4,20 +4,21 @@ public class CharacterAnimator : MonoBehaviour {
     
     [SerializeField] private SammyController controller;
     [SerializeField] private Animator animator;
-    [SerializeField] private float rotationSpeed;
+    // [SerializeField] private float rotationSpeed;
+    [SerializeField] private float jumpVelocityThreshold;
 
     private const float RIGHT_ROTATION = 90.0f;
     private const float LEFT_ROTATION = 260.0f;
     private float currentTarget = RIGHT_ROTATION;
-
-    // TODO: Translate character movements into animation triggers. Alternatively, feed character controller data to
-    //       the animator and it'll handle it's own transitions. That's probably best.
-
+    private Vector3 tempVector;
+    
     void Update() {
-        animator.SetFloat("VelocityX", controller.GetVelocity().x);
-        animator.SetFloat("AbsVelocityX",  Mathf.Abs(controller.GetVelocity().x));
+        tempVector = controller.GetVelocity();
+
+        animator.SetFloat("VelocityX", tempVector.x);
+        animator.SetFloat("AbsVelocityX",  Mathf.Max(0.05f, Mathf.Abs(tempVector.x)));
         animator.SetBool("IsGrounded", controller.isGrounded);
-        if (!controller.isGrounded && controller.isGroundedPrev) {
+        if (!controller.isGrounded && controller.isGroundedPrev && tempVector.y >= jumpVelocityThreshold) {
             animator.SetTrigger("Jump");
         }
 

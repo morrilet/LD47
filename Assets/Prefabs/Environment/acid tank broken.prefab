@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7104011415753832880
 Transform:
@@ -194,7 +194,7 @@ PrefabInstance:
     - target: {fileID: 2022522676757442554, guid: 8a3db778d89b98c488757402c002dc92,
         type: 3}
       propertyPath: m_Lightmapping
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2022522676757442554, guid: 8a3db778d89b98c488757402c002dc92,
         type: 3}
@@ -204,22 +204,47 @@ PrefabInstance:
     - target: {fileID: 2022522676757442554, guid: 8a3db778d89b98c488757402c002dc92,
         type: 3}
       propertyPath: m_Intensity
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022522676757442554, guid: 8a3db778d89b98c488757402c002dc92,
+        type: 3}
+      propertyPath: m_Range
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022522676757442554, guid: 8a3db778d89b98c488757402c002dc92,
+        type: 3}
+      propertyPath: m_BounceIntensity
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022522676757442554, guid: 8a3db778d89b98c488757402c002dc92,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 4.2e-44
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022522676757442554, guid: 8a3db778d89b98c488757402c002dc92,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 2.789e-42
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022522676757442554, guid: 8a3db778d89b98c488757402c002dc92,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 5.9e-44
       objectReference: {fileID: 0}
     - target: {fileID: 2995827760048251175, guid: 8a3db778d89b98c488757402c002dc92,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.7149079
+      value: 1.45
       objectReference: {fileID: 0}
     - target: {fileID: 2995827760048251175, guid: 8a3db778d89b98c488757402c002dc92,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8129045
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 2995827760048251175, guid: 8a3db778d89b98c488757402c002dc92,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.4814634
+      value: 4.2
       objectReference: {fileID: 0}
     - target: {fileID: 2995827760048251175, guid: 8a3db778d89b98c488757402c002dc92,
         type: 3}
@@ -286,20 +311,60 @@ PrefabInstance:
       propertyPath: m_Name
       value: PointLight_Red_Flicker
       objectReference: {fileID: 0}
+    - target: {fileID: 6176372150957120711, guid: 80ab097f47a1f4141853eb0f5dfacd97,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176372150957120711, guid: 80ab097f47a1f4141853eb0f5dfacd97,
+        type: 3}
+      propertyPath: m_Range
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176372150957120711, guid: 80ab097f47a1f4141853eb0f5dfacd97,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176372150957120711, guid: 80ab097f47a1f4141853eb0f5dfacd97,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176372150957120711, guid: 80ab097f47a1f4141853eb0f5dfacd97,
+        type: 3}
+      propertyPath: m_BounceIntensity
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176372150957120711, guid: 80ab097f47a1f4141853eb0f5dfacd97,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 8.3e-44
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176372150957120711, guid: 80ab097f47a1f4141853eb0f5dfacd97,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 1.68e-43
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176372150957120711, guid: 80ab097f47a1f4141853eb0f5dfacd97,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 5.9e-44
+      objectReference: {fileID: 0}
     - target: {fileID: 6932378406194024986, guid: 80ab097f47a1f4141853eb0f5dfacd97,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.24190784
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 6932378406194024986, guid: 80ab097f47a1f4141853eb0f5dfacd97,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8129045
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 6932378406194024986, guid: 80ab097f47a1f4141853eb0f5dfacd97,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.5284634
+      value: 4.2
       objectReference: {fileID: 0}
     - target: {fileID: 6932378406194024986, guid: 80ab097f47a1f4141853eb0f5dfacd97,
         type: 3}
@@ -361,20 +426,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: PointLight_Green
       objectReference: {fileID: 0}
+    - target: {fileID: 2022522676757442554, guid: ba4186da24b2d164bb101a9fb88886f4,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022522676757442554, guid: ba4186da24b2d164bb101a9fb88886f4,
+        type: 3}
+      propertyPath: m_Range
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022522676757442554, guid: ba4186da24b2d164bb101a9fb88886f4,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022522676757442554, guid: ba4186da24b2d164bb101a9fb88886f4,
+        type: 3}
+      propertyPath: m_BounceIntensity
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022522676757442554, guid: ba4186da24b2d164bb101a9fb88886f4,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.1743e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022522676757442554, guid: ba4186da24b2d164bb101a9fb88886f4,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2995827760048251175, guid: ba4186da24b2d164bb101a9fb88886f4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.39809203
+      value: -0.6
       objectReference: {fileID: 0}
     - target: {fileID: 2995827760048251175, guid: ba4186da24b2d164bb101a9fb88886f4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8129045
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 2995827760048251175, guid: ba4186da24b2d164bb101a9fb88886f4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.5124636
+      value: 4.2
       objectReference: {fileID: 0}
     - target: {fileID: 2995827760048251175, guid: ba4186da24b2d164bb101a9fb88886f4,
         type: 3}
@@ -436,20 +531,45 @@ PrefabInstance:
       propertyPath: m_Name
       value: PointLight_Red (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2022522676757442554, guid: 8a3db778d89b98c488757402c002dc92,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022522676757442554, guid: 8a3db778d89b98c488757402c002dc92,
+        type: 3}
+      propertyPath: m_Range
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022522676757442554, guid: 8a3db778d89b98c488757402c002dc92,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022522676757442554, guid: 8a3db778d89b98c488757402c002dc92,
+        type: 3}
+      propertyPath: m_BounceIntensity
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022522676757442554, guid: 8a3db778d89b98c488757402c002dc92,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 2995827760048251175, guid: 8a3db778d89b98c488757402c002dc92,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8970921
+      value: -1.45
       objectReference: {fileID: 0}
     - target: {fileID: 2995827760048251175, guid: 8a3db778d89b98c488757402c002dc92,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8129045
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 2995827760048251175, guid: 8a3db778d89b98c488757402c002dc92,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.433463
+      value: 4.2
       objectReference: {fileID: 0}
     - target: {fileID: 2995827760048251175, guid: 8a3db778d89b98c488757402c002dc92,
         type: 3}

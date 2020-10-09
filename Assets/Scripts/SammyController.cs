@@ -108,6 +108,7 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
         currentJumps = 0;
         currentInput = Vector3.zero;
         prevInput = Vector3.zero;
+        velocity = Vector3.zero;
         
         // CharacterController resets any `transform.position` changes. Hide our sins from it.
         controller.enabled = false;
