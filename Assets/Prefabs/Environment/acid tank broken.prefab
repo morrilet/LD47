@@ -204,7 +204,7 @@ PrefabInstance:
     - target: {fileID: 2022522676757442554, guid: 8a3db778d89b98c488757402c002dc92,
         type: 3}
       propertyPath: m_Shadows.m_Type
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2022522676757442554, guid: 8a3db778d89b98c488757402c002dc92,
         type: 3}
@@ -214,7 +214,7 @@ PrefabInstance:
     - target: {fileID: 2022522676757442554, guid: 8a3db778d89b98c488757402c002dc92,
         type: 3}
       propertyPath: m_Range
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2022522676757442554, guid: 8a3db778d89b98c488757402c002dc92,
         type: 3}
@@ -324,12 +324,12 @@ PrefabInstance:
     - target: {fileID: 6176372150957120711, guid: 80ab097f47a1f4141853eb0f5dfacd97,
         type: 3}
       propertyPath: m_Range
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6176372150957120711, guid: 80ab097f47a1f4141853eb0f5dfacd97,
         type: 3}
       propertyPath: m_Shadows.m_Type
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6176372150957120711, guid: 80ab097f47a1f4141853eb0f5dfacd97,
         type: 3}
@@ -444,7 +444,7 @@ PrefabInstance:
     - target: {fileID: 2022522676757442554, guid: ba4186da24b2d164bb101a9fb88886f4,
         type: 3}
       propertyPath: m_Range
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2022522676757442554, guid: ba4186da24b2d164bb101a9fb88886f4,
         type: 3}
@@ -465,6 +465,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
       value: 6.333187e+16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022522676757442554, guid: ba4186da24b2d164bb101a9fb88886f4,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2995827760048251175, guid: ba4186da24b2d164bb101a9fb88886f4,
         type: 3}
@@ -549,7 +554,7 @@ PrefabInstance:
     - target: {fileID: 2022522676757442554, guid: 8a3db778d89b98c488757402c002dc92,
         type: 3}
       propertyPath: m_Range
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2022522676757442554, guid: 8a3db778d89b98c488757402c002dc92,
         type: 3}
@@ -570,6 +575,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BoundingSphereOverride.y
       value: 4.2504e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022522676757442554, guid: 8a3db778d89b98c488757402c002dc92,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2995827760048251175, guid: 8a3db778d89b98c488757402c002dc92,
         type: 3}
