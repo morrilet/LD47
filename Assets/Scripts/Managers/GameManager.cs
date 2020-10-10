@@ -45,12 +45,12 @@ public class GameManager : MonoBehaviour
             platformQueue.Dequeue();
         }
 
-        if(Input.GetButton("Restart"))
+        if(InputManager.instance.GetReset())
         {
             if(resetTimer < resetTimerMax) {
                 resetTimer += Time.deltaTime;
             } else {
-                if (Input.GetButton("Fire3")) {
+                if (InputManager.instance.GetTimeshift()) {
                     ResetPlatforms();
                 } else {
                     KillPlayer();
@@ -59,12 +59,12 @@ public class GameManager : MonoBehaviour
             }
             
             // Reset the timer if we switch from platform clear to player clear or vice versa.
-            if (Input.GetButtonUp("Fire3") || Input.GetButtonDown("Fire3")) {
+            if (InputManager.instance.GetTimeshiftUp() || InputManager.instance.GetTimeshiftDown()) {
                 resetTimer = 0;
             }
         }
 
-        if (Input.GetButtonUp("Restart")) {
+        if (InputManager.instance.GetResetUp()) {
             resetTimer = 0;
         }
     }

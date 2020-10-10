@@ -32,12 +32,12 @@ public class PlatformSpawner : MonoBehaviour {
         if (!player.isGroundedOnLevelObj && !player.isGroundedOnLevelObjPrev)
         {
             if (canPlacePlatform && platformsThisLoop < maxPlatformsPerLoop) {
-                if (Input.GetButton("Fire3") && Input.GetButtonDown("Jump")) {
+                if (InputManager.instance.GetTimeshift() && InputManager.instance.GetJumpDown()) {
                     canPlacePlatform = false;
                     PlacePlatform();
                 }
             } else {
-                if (Input.GetButtonUp("Jump")) {
+                if (InputManager.instance.GetJumpUp()) {
                     canPlacePlatform = true;
                 }
             }
@@ -53,17 +53,17 @@ public class PlatformSpawner : MonoBehaviour {
 
     public void HandleScaleTime() {
 
-        if(Input.GetButtonDown("Fire3") && !player.isGrounded) {
+        if(InputManager.instance.GetTimeshiftDown() && !player.isGrounded) {
             TimeManager.instance.SetTimeScale(
                 GlobalVariables.instance.timeSlowScale, GlobalVariables.instance.timeSlowTransitionDuration
             );
         }
-        if (Input.GetButtonUp("Fire3") || (player.isGrounded && !player.isGroundedPrev)) {
+        if (InputManager.instance.GetTimeshiftUp() || (player.isGrounded && !player.isGroundedPrev)) {
             TimeManager.instance.SetTimeScale(
                 1.0f, GlobalVariables.instance.timeSlowTransitionDuration
             );
         }
-        if (Input.GetButton("Fire3") && (!player.isGrounded && player.isGroundedPrev)) {
+        if (InputManager.instance.GetTimeshift() && (!player.isGrounded && player.isGroundedPrev)) {
             TimeManager.instance.SetTimeScale(
                 GlobalVariables.instance.timeSlowScale, GlobalVariables.instance.timeSlowTransitionDuration
                 );

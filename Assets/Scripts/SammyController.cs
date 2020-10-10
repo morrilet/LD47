@@ -88,7 +88,7 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
     }
 
     private void ApplyVerticalSpeed() {
-        if ((currentInput.y > 0 && prevInput.y <= 0) || Input.GetButtonDown("Jump")) {
+        if (InputManager.instance.GetJumpDown()) {
             if (isGrounded && currentJumps < jumpCount) {
                 velocity.y = Mathf.Sqrt(jumpHeight * -2.0f * GlobalVariables.instance.gravity);
                 currentJumps++;

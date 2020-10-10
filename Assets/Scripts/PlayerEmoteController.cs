@@ -16,16 +16,16 @@ public class PlayerEmoteController : MonoBehaviour {
 
     private void Update() {
         if (timer > emoteCooldown) {
-            if(Input.GetButtonDown("Emote1")) {
+            if(InputManager.instance.GetEmoteOneDown()) {
                 PlayEmote(emotes[0]);
             }
-            else if(Input.GetButtonDown("Emote2")) {
+            else if(InputManager.instance.GetEmoteTwoDown()) {
                 PlayEmote(emotes[1]);
             }
-            else if(Input.GetButtonDown("Emote3")) {
+            else if(InputManager.instance.GetEmoteThreeDown()) {
                 PlayEmote(emotes[2]);
             }
-            else if(Input.GetButtonDown("Emote4")) {
+            else if(InputManager.instance.GetEmoteFourDown()) {
                 PlayEmote(emotes[3]);
             }
         } else {
