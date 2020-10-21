@@ -25,7 +25,8 @@ public class GameManager : MonoBehaviour
         instance = this;
 
         // Unlock the current scene for the player. This enables it in level_select.
-        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name, 1);
+        Debug.Log($"Setting player prefs for {SceneManager.GetActiveScene().name}");
+        PlayerPrefs.SetInt(SceneManager.GetActiveScene().buildIndex + "", 1);
     }
 
     private void Start() {

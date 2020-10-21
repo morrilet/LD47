@@ -23,6 +23,9 @@ public class LevelSelectItem : MonoBehaviour {
         if (levelData.displayImage != null) {
             localImage = levelData.displayImage;
         }
+    }
+
+    private void Start() {
         localButton.interactable = IsSceneUnlocked();
     }
 
@@ -33,6 +36,6 @@ public class LevelSelectItem : MonoBehaviour {
     private bool IsSceneUnlocked() {
         if (levelData.noUnlockRequired)
             return true;
-        return PlayerPrefs.GetInt(SceneManager.GetSceneByBuildIndex(levelData.sceneBuildIndex).name) == 1;
+        return PlayerPrefs.GetInt(levelData.sceneBuildIndex.ToString()) == 1;
     }
 }
