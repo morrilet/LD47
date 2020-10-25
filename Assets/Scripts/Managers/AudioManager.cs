@@ -36,17 +36,19 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlaySound(string name)
+    public AudioSource PlaySound(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
 
         if (s == null)
         {
             Debug.LogWarning("Sound of name " + name + " not found!");
-            return;
+            return null;
         }
         s.source.volume = s.volume * (s.isEffect ? masterEffectVolume : masterMusicVolume);
         s.source.Play();
+
+        return s.source;
     }
 
     public void SetEffectsVolume(float value)

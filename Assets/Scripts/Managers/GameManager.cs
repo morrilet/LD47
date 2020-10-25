@@ -19,6 +19,15 @@ public class GameManager : MonoBehaviour
 
     private Vector3 respawnPosition;
     private bool hasFreezePlayerRequest;
+    private AudioSource resetSource;
+
+    public delegate void PlayerResetAction();
+    public PlayerResetAction onPlayerReset;
+
+    public enum CauseOfDeath {
+        Reset,
+        Acid,
+    }
 
     private void Awake() {
         if (instance != null)
@@ -47,6 +56,11 @@ public class GameManager : MonoBehaviour
             platformQueue.Dequeue();
         }
 
+        /* -~-~-~-~- RESET HANDLING -~-~-~-~-*/
+        if (InputManager.instance.GetResetDown()) {
+            resetSource = AudioManager.instance.PlaySound("Reset");
+        }
+
         if(InputManager.instance.GetReset())
         {
             if(resetTimer < resetTimerMax) {
@@ -55,7 +69,7 @@ public class GameManager : MonoBehaviour
                 if (InputManager.instance.GetTimeshift()) {
                     ResetPlatforms();
                 } else {
-                    KillPlayer();
+                    KillPlayer(GameManager.CauseOfDeath.Reset);
                 }
                 resetTimer = 0;
             }
@@ -67,8 +81,10 @@ public class GameManager : MonoBehaviour
         }
 
         if (InputManager.instance.GetResetUp()) {
+            resetSource.Stop();
             resetTimer = 0;
         }
+        /* -~-~-~-~- END RESET HANDLING -~-~-~-~-*/
 
         if (resetTimer > 0 && player.isGrounded) {
             FreezePlayer();
@@ -84,6 +100,15 @@ public class GameManager : MonoBehaviour
         hasFreezePlayerRequest = false;
     }
 
+    private void ResetPlayer() {
+        player.gameObject.SetActive(true);
+        player.Reset(respawnPosition);
+
+        if (onPlayerReset != null) {
+            onPlayerReset();
+        }
+    }
+
     public void FreezePlayer() {
         hasFreezePlayerRequest = true;
     }
@@ -92,9 +117,17 @@ public class GameManager : MonoBehaviour
         respawnPosition = position;
     }
 
-    public void KillPlayer() {
+    public void KillPlayer(CauseOfDeath reason) {
         currentLoopCount += 1;
-        player.Reset(respawnPosition);
+
+        if (reason == CauseOfDeath.Acid) {
+            player.gameObject.SetActive(false);
+            AudioManager.instance.PlaySound("Acid");
+            Invoke("ResetPlayer", 2.5f);  // 2.5s is the duration of the acid audio effect.
+        } 
+        else if (reason == CauseOfDeath.Reset) {
+            ResetPlayer();
+        }
     }
 
     public void NewCheckpoint()
@@ -110,7 +143,6 @@ public class GameManager : MonoBehaviour
     public void ResetPlatforms() {
         // Perf nightmare but I'm past caring. Gotta go fast.
         SpawnedPlatform[] allPlatforms = Object.FindObjectsOfType<SpawnedPlatform>();
-        Debug.Log(allPlatforms);
         for (int i = 0; i < allPlatforms.Length; i++) {
             GameObject.Destroy(allPlatforms[i].gameObject);
         }

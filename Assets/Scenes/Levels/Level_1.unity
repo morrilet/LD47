@@ -3866,6 +3866,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1289362648}
+    - target: {fileID: 6459321342124777641, guid: 56efd4795982d0b49ad07ca722b3e037,
+        type: 3}
+      propertyPath: sounds.Array.data[15].pitch
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56efd4795982d0b49ad07ca722b3e037, type: 3}
 --- !u!1001 &1387405511
