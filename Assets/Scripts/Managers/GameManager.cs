@@ -10,14 +10,15 @@ public class GameManager : MonoBehaviour
     public Queue<SpawnedPlatform> platformQueue;
     private int maxPlatforms = 9;
 
-    private float resetTimer;
-    private float resetTimerMax;
+    public float resetTimer { get; private set; }
+    public float resetTimerMax { get; private set; }
 
     public int currentLoopCount { get; private set; }
 
     [SerializeField] private SammyController player;
 
     private Vector3 respawnPosition;
+    private bool hasFreezePlayerRequest;
 
     private void Awake() {
         if (instance != null)
@@ -32,7 +33,7 @@ public class GameManager : MonoBehaviour
     private void Start() {
         respawnPosition = player.transform.position;
         platformQueue = new Queue<SpawnedPlatform>();
-        resetTimerMax = 1f;
+        resetTimerMax = 1.25f;
 
         AudioManager.instance.PlaySound("MainMusic");
     }
@@ -68,6 +69,23 @@ public class GameManager : MonoBehaviour
         if (InputManager.instance.GetResetUp()) {
             resetTimer = 0;
         }
+
+        if (resetTimer > 0 && player.isGrounded) {
+            FreezePlayer();
+        }
+        UpdateFreezePlayer();
+    }
+
+    private void UpdateFreezePlayer() {
+        // The idea here is that if ANY script requests to freeze the player we do it, but only for that
+        // frame. As scripts no longer need to freeze the player they'll stop requesting it and we can
+        // safely resume the player. This keeps various scripts from stepping on each others toes.
+        player.canMove = !hasFreezePlayerRequest;
+        hasFreezePlayerRequest = false;
+    }
+
+    public void FreezePlayer() {
+        hasFreezePlayerRequest = true;
     }
 
     public void UpdateRespawnPosition(Vector3 position) {

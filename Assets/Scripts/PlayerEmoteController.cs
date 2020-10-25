@@ -9,10 +9,19 @@ public struct Emote {
 public class PlayerEmoteController : MonoBehaviour {
 
     [SerializeField] private WorldUIController uiController;
+    [SerializeField] private SammyController playerController;
     [SerializeField] private float emoteCooldown = 1.0f;
     [SerializeField] private Emote[] emotes;
 
     private float timer;
+    private bool wasGroundedWhenStartEmote;
+
+    public bool isEmoting { get; private set; }
+    public bool isEmotingPrev { get; private set; }
+
+    private void Start() {
+        timer = emoteCooldown;
+    }
 
     private void Update() {
         if (timer > emoteCooldown) {
@@ -30,12 +39,23 @@ public class PlayerEmoteController : MonoBehaviour {
             }
         } else {
             timer += Time.deltaTime;
+            if (wasGroundedWhenStartEmote) {
+                GameManager.instance.FreezePlayer();
+            }
         }
+
+        isEmotingPrev = isEmoting;
+        isEmoting = timer <= emoteCooldown;
     }
 
     private void PlayEmote(Emote emote) {
         uiController.SpawnPoppableUIElement(emote.poppableUIElement);
         AudioManager.instance.PlaySound(emote.audioEffect);
+        wasGroundedWhenStartEmote = playerController.isGrounded;
         timer = 0.0f;
+    }
+
+    public float GetEmoteCooldown() {
+        return emoteCooldown;
     }
 }

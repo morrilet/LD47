@@ -11,7 +11,6 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
     [SerializeField] private Pusher pusher;
 
     public float horizontalSpeed_Grounded = 6;
-
     public float horizontalSpeed_Air = 5;
     public float jumpHeight = 4;
     public float jumpCount = 1;
@@ -22,6 +21,8 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
     public bool isGroundedOnLevelObjPrev { get; private set; }
     public bool isTouchingCeiling { get; private set; }
     public bool isTouchingCeilingPrev { get; private set; }
+
+    [HideInInspector] public bool canMove = true;
 
     private Vector2 currentInput, prevInput;
     private int currentJumps;
@@ -55,7 +56,6 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
     private void GetInput() {
         prevInput = currentInput;
         currentInput.x = Input.GetAxis("Horizontal");
-        currentInput.y = Input.GetAxisRaw("Vertical");  // Binary inputs for up / down.
     }
 
     private void ApplyLogic() {
@@ -83,8 +83,10 @@ public class SammyController : MonoBehaviour, ITrampolineTarget, IConveyorBeltTa
     }
 
     private void ApplyHorizontalSpeed() {
-        float horizSpeed = currentInput.x * (isGrounded ? horizontalSpeed_Grounded : horizontalSpeed_Air);
-        velocity.x += horizSpeed;
+        if (canMove) {
+            float horizSpeed = currentInput.x * (isGrounded ? horizontalSpeed_Grounded : horizontalSpeed_Air);
+            velocity.x += horizSpeed;
+        }
     }
 
     private void ApplyVerticalSpeed() {

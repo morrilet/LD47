@@ -3,6 +3,7 @@ using UnityEngine;
 public class CharacterAnimator : MonoBehaviour {
     
     [SerializeField] private SammyController controller;
+    [SerializeField] private PlayerEmoteController emoteController;
     [SerializeField] private Animator animator;
     // [SerializeField] private float rotationSpeed;
     [SerializeField] private float jumpVelocityThreshold;
@@ -21,6 +22,12 @@ public class CharacterAnimator : MonoBehaviour {
         if (!controller.isGrounded && controller.isGroundedPrev && tempVector.y >= jumpVelocityThreshold) {
             animator.SetTrigger("Jump");
         }
+        animator.SetBool("Reset", GameManager.instance.resetTimer != 0 && controller.isGrounded);
+        animator.SetFloat("ResetSpeed", 1.0f / GameManager.instance.resetTimerMax);
+        if ((emoteController.isEmoting && !emoteController.isEmotingPrev) && controller.isGrounded) {
+            animator.SetTrigger("Emote");
+        }
+        animator.SetFloat("EmoteSpeed", 1.0f / emoteController.GetEmoteCooldown());
 
         RotateTowardVelocity();
     }
