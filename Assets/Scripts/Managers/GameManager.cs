@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     public float resetTimer { get; private set; }
     public float resetTimerMax { get; private set; }
+    private bool canReset = true;
 
     public int currentLoopCount { get; private set; }
 
@@ -61,11 +62,12 @@ public class GameManager : MonoBehaviour
             resetSource = AudioManager.instance.PlaySound("Reset");
         }
 
-        if(InputManager.instance.GetReset())
+        if(InputManager.instance.GetReset() && canReset)
         {
             if(resetTimer < resetTimerMax) {
                 resetTimer += Time.deltaTime;
             } else {
+                canReset = false;
                 if (InputManager.instance.GetTimeshift()) {
                     ResetPlatforms();
                 } else {
@@ -76,6 +78,8 @@ public class GameManager : MonoBehaviour
             
             // Reset the timer if we switch from platform clear to player clear or vice versa.
             if (InputManager.instance.GetTimeshiftUp() || InputManager.instance.GetTimeshiftDown()) {
+                resetSource.Stop();
+                resetSource = AudioManager.instance.PlaySound("Reset");
                 resetTimer = 0;
             }
         }
@@ -83,6 +87,7 @@ public class GameManager : MonoBehaviour
         if (InputManager.instance.GetResetUp()) {
             resetSource.Stop();
             resetTimer = 0;
+            canReset = true;
         }
         /* -~-~-~-~- END RESET HANDLING -~-~-~-~-*/
 
