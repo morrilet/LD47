@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1959062706076035}
   - component: {fileID: 539218494987258400}
   - component: {fileID: 8436956642813105245}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PlatformEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4885,7 +4885,7 @@ GameObject:
   - component: {fileID: 8199942942505965182}
   - component: {fileID: 8199942942505965181}
   - component: {fileID: 8199942942505965180}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4945,7 +4945,7 @@ GameObject:
   - component: {fileID: 8199942943648450292}
   - component: {fileID: 8199942943648450288}
   - component: {fileID: 1087416883}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Trampoline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5080,7 +5080,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3973759945897318040}
   - component: {fileID: 8100010225455819221}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Particle System Force Field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5693,6 +5693,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gravity Plate
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c8fbb5f6928e434dbac1d744fc21bf4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c8fbb5f6928e434dbac1d744fc21bf4, type: 3}
 --- !u!4 &543450652802198788 stripped
@@ -5783,6 +5788,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 47eeead403a363e40839d89e1c3fa7e4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47eeead403a363e40839d89e1c3fa7e4, type: 3}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1135900241951584278}
   - component: {fileID: 4145181557827270174}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Particle System Force Field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 7578703617485660174}
   - component: {fileID: 412797296373101575}
   - component: {fileID: 4078949138906047148}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PlatformEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5414,7 +5414,7 @@ GameObject:
   - component: {fileID: 2587370723349724049}
   - component: {fileID: 2587370723349724053}
   - component: {fileID: 5761674811560189830}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ConveyorBelt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5612,6 +5612,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Conveyor FX
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0658b96579dadac43aa9514c4e02672b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0658b96579dadac43aa9514c4e02672b, type: 3}
 --- !u!1 &919132148127109530 stripped
@@ -5707,6 +5712,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Conveyor
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b4a9c8b23072563409a0407b1a63c54c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4a9c8b23072563409a0407b1a63c54c, type: 3}
 --- !u!4 &543450652162214261 stripped
@@ -5796,7 +5806,7 @@ PrefabInstance:
     - target: {fileID: 6420244118907202004, guid: f7136639969da474db64855dc9cecb56,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7136639969da474db64855dc9cecb56, type: 3}

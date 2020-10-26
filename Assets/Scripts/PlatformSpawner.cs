@@ -12,6 +12,8 @@ public class PlatformSpawner : MonoBehaviour {
     private int platformsThisLoop;
     private int maxPlatformsPerLoop;
     private int startingLoopCount;
+    private bool timeSlowed;
+    private bool timeSlowedPrev;
 
     private List<GameObject> spawnedPlatforms = new List<GameObject>();
 
@@ -52,21 +54,36 @@ public class PlatformSpawner : MonoBehaviour {
     }
 
     public void HandleScaleTime() {
+        timeSlowedPrev = timeSlowed;
 
-        if(InputManager.instance.GetTimeshiftDown() && !player.isGrounded) {
-            TimeManager.instance.SetTimeScale(
-                GlobalVariables.instance.timeSlowScale, GlobalVariables.instance.timeSlowTransitionDuration
-            );
-        }
-        if (InputManager.instance.GetTimeshiftUp() || (player.isGrounded && !player.isGroundedPrev)) {
-            TimeManager.instance.SetTimeScale(
-                1.0f, GlobalVariables.instance.timeSlowTransitionDuration
-            );
-        }
-        if (InputManager.instance.GetTimeshift() && (!player.isGrounded && player.isGroundedPrev)) {
-            TimeManager.instance.SetTimeScale(
-                GlobalVariables.instance.timeSlowScale, GlobalVariables.instance.timeSlowTransitionDuration
+        if (!timeSlowed) {
+            if(InputManager.instance.GetTimeshiftDown() && !player.isGrounded) {
+                TimeManager.instance.SetTimeScale(
+                    GlobalVariables.instance.timeSlowScale, GlobalVariables.instance.timeSlowTransitionDuration
                 );
+                timeSlowed = true;
+            }
+            if (InputManager.instance.GetTimeshift() && (!player.isGrounded && player.isGroundedPrev)) {
+                TimeManager.instance.SetTimeScale(
+                    GlobalVariables.instance.timeSlowScale, GlobalVariables.instance.timeSlowTransitionDuration
+                );
+                timeSlowed = true;
+            }
+        } else {
+            if (InputManager.instance.GetTimeshiftUp() || (player.isGrounded && !player.isGroundedPrev)) {
+                
+                Debug.Log($"{player.isGrounded} -- {player.isGroundedPrev}");
+                TimeManager.instance.SetTimeScale(
+                    1.0f, GlobalVariables.instance.timeSlowTransitionDuration
+                );
+                timeSlowed = false;
+            }
+        }
+
+        if (timeSlowed != timeSlowedPrev) {
+            // Debug.Log($"{timeSlowed} -- {timeSlowedPrev}");
+            Debug.Log("PLAY TIME SOUND");
+            AudioManager.instance.PlaySound(timeSlowed ? "TimeSlow" : "TimeResume");
         }
     }
 

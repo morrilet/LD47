@@ -14,9 +14,12 @@ public class SpawnedPlatform : MonoBehaviour {
     [SerializeField] private Material inactiveMaterial;
     [SerializeField] private Material activeMaterial;
     [SerializeField] private GameObject[] activeObjects;
+    private string activeLayer = "Default";
+    private string inactiveLayer = "TemporaryPlatform";
 
     private int startingLoopCount;
     private bool isActive;
+    private int startingLayer;
 
     private void Start() {
         startingLoopCount = GameManager.instance.currentLoopCount;
@@ -32,6 +35,8 @@ public class SpawnedPlatform : MonoBehaviour {
         for (int i = 0; i < activeObjects.Length; i++) {
             activeObjects[i].SetActive(false);
         }
+
+        this.gameObject.layer = LayerMask.NameToLayer(inactiveLayer);
     }
 
     private void Update() {
@@ -44,6 +49,7 @@ public class SpawnedPlatform : MonoBehaviour {
     private void Activate() {
         isActive = true;
         GameManager.instance.EnquePlatform(this);
+        this.gameObject.layer = LayerMask.NameToLayer(activeLayer);
 
         for(int i = 0; i < colliders.Length; i++) {
             colliders[i].enabled = true;
@@ -60,6 +66,7 @@ public class SpawnedPlatform : MonoBehaviour {
 
     public void Deactivate() {
         isActive = false;
+        this.gameObject.layer = LayerMask.NameToLayer(inactiveLayer);
 
         for(int i = 0; i < persistObjects.Length; i++) {
             persistObjects[i].transform.parent = null;

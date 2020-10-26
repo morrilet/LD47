@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 278020536}
   - component: {fileID: 278020538}
   - component: {fileID: 278020537}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PlatformEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4884,7 +4884,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1728198451}
   - component: {fileID: 1728198452}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Particle System Force Field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5413,7 +5413,7 @@ GameObject:
   - component: {fileID: 718604292148963685}
   - component: {fileID: 718604292148963684}
   - component: {fileID: 484756522}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5519,6 +5519,7 @@ MonoBehaviour:
   destroyPersistentObjectDelay: 0
   inactiveMaterial: {fileID: 2100000, guid: 6a75aed62af1d7d419f74ae747142e25, type: 2}
   activeMaterial: {fileID: 2100000, guid: 51bf07662db18cc458c0ef4e25186448, type: 2}
+  activeObjects: []
 --- !u!1001 &1287800407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5530,6 +5531,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Temporal Platform (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 39918322894520623, guid: 5a9ca1620dca12f4787c9b0a4d72ad43,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 848366869547588501, guid: 5a9ca1620dca12f4787c9b0a4d72ad43,
         type: 3}

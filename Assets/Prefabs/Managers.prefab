@@ -281,7 +281,7 @@ PrefabInstance:
     - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
         type: 3}
       propertyPath: sounds.Array.size
-      value: 16
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
         type: 3}
@@ -622,7 +622,7 @@ PrefabInstance:
         type: 3}
       propertyPath: sounds.Array.data[13].clip
       value: 
-      objectReference: {fileID: 8300000, guid: e7a676cba2d09d4429824989086e2505, type: 3}
+      objectReference: {fileID: 8300000, guid: 35a992658637de84fafee102279f4e27, type: 3}
     - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
         type: 3}
       propertyPath: sounds.Array.data[13].isEffect
@@ -686,6 +686,56 @@ PrefabInstance:
     - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
         type: 3}
       propertyPath: sounds.Array.data[15].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
+        type: 3}
+      propertyPath: sounds.Array.data[16].name
+      value: TimeSlow
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
+        type: 3}
+      propertyPath: sounds.Array.data[16].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8c9d5eb958d8f1847ad2cd59347a9169, type: 3}
+    - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
+        type: 3}
+      propertyPath: sounds.Array.data[16].isEffect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
+        type: 3}
+      propertyPath: sounds.Array.data[16].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
+        type: 3}
+      propertyPath: sounds.Array.data[16].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
+        type: 3}
+      propertyPath: sounds.Array.data[17].name
+      value: TimeResume
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
+        type: 3}
+      propertyPath: sounds.Array.data[17].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d8452277986c1ff4286617370cee8a5f, type: 3}
+    - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
+        type: 3}
+      propertyPath: sounds.Array.data[17].isEffect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
+        type: 3}
+      propertyPath: sounds.Array.data[17].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745224127699735574, guid: ba2e74fa5b8e2924e892043d65947062,
+        type: 3}
+      propertyPath: sounds.Array.data[17].pitch
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
