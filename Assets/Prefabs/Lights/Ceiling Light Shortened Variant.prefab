@@ -17,6 +17,11 @@ PrefabInstance:
       propertyPath: m_Range
       value: 11.29482
       objectReference: {fileID: 0}
+    - target: {fileID: 6351739498399796612, guid: 6eab4e69ae974894f9d30507003e54ba,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 7991
+      objectReference: {fileID: 0}
     - target: {fileID: 6524237873438424780, guid: 6eab4e69ae974894f9d30507003e54ba,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -75,7 +80,7 @@ PrefabInstance:
     - target: {fileID: 6894300539262028082, guid: 6eab4e69ae974894f9d30507003e54ba,
         type: 3}
       propertyPath: m_Name
-      value: Ceiling Light Shortened
+      value: Ceiling Light Shortened Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6eab4e69ae974894f9d30507003e54ba, type: 3}
